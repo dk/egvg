@@ -252,145 +252,145 @@ const
 
   CListViewer = #10#11#12#13#14#15#16#17;
 
-(*
+{
 
  CWindow
 
            CFrame                 CScrollBar
            ------------------     ------------------
- ÉÍÍÍÍ»
- º  1 º    Passive back
- ÇÄÄÄÄ¶
- º  2 º    Active Back
- ÇÄÄÄÄ¶
- º  3 º    Passive Title fore
- ÇÄÄÄÄ¶
- º  4 º    Passive Title back
- ÇÄÄÄÄ¶
- º  5 º    Active Title fore
- ÇÄÄÄÄ¶
- º  6 º    Active Title back
- ÇÄÄÄÄ¶
- º  7 º    3D bright              3D dark
- ÇÄÄÄÄ¶
- º  8 º    3D dark                3D bright
- ÇÄÄÄÄ¶
- º  9 º    Window background      Page background
- ÈÍÍÍÍ¼
+ â•”â•â•â•â•â•—
+ â•‘  1 â•‘    Passive back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  2 â•‘    Active Back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  3 â•‘    Passive Title fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  4 â•‘    Passive Title back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  5 â•‘    Active Title fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  6 â•‘    Active Title back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  7 â•‘    3D bright              3D dark
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  8 â•‘    3D dark                3D bright
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  9 â•‘    Window background      Page background
+ â•šâ•â•â•â•â•
 
            CScroller              CListViewer
            -------------------    ---------------------
- ÉÍÍÍÍ»
- º  A º    Normal text fore       Normal text fore
- ÇÄÄÄÄ¶
- º  B º    Normal text back       Normal text back
- ÇÄÄÄÄ¶
- º  C º    Selected text fore     Selected text fore
- ÇÄÄÄÄ¶
- º  D º    Selected text back     Selected text back
- ÇÄÄÄÄ¶
- º  E º                           Focused text fore
- ÇÄÄÄÄ¶
- º  F º                           Focused text back
- ÇÄÄÄÄ¶
- º 10 º                           Divider 3D bright
- ÇÄÄÄÄ¶
- º 11 º                           Divider 3D dark
- ÈÍÍÍÍ¼
+ â•”â•â•â•â•â•—
+ â•‘  A â•‘    Normal text fore       Normal text fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  B â•‘    Normal text back       Normal text back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  C â•‘    Selected text fore     Selected text fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  D â•‘    Selected text back     Selected text back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  E â•‘                           Focused text fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘  F â•‘                           Focused text back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 10 â•‘                           Divider 3D bright
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 11 â•‘                           Divider 3D dark
+ â•šâ•â•â•â•â•
 
 
            CStaticText
            ------------------
- ÉÍÍÍÍ»
- º 12 º    Text fore
- ÇÄÄÄÄ¶
- º 13 º    Text back
- ÈÍÍÍÍ¼
+ â•”â•â•â•â•â•—
+ â•‘ 12 â•‘    Text fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 13 â•‘    Text back
+ â•šâ•â•â•â•â•
 
            CLabel
            ------------------
- ÉÍÍÍÍ»
- º 14 º    Text Normal fore
- ÇÄÄÄÄ¶
- º 15 º    Text Normal back
- ÇÄÄÄÄ¶
- º 16 º    Text Selected fore
- ÇÄÄÄÄ¶
- º 17 º    Text Selected back
- ÇÄÄÄÄ¶
- º 18 º    Shortcut Normal
- ÇÄÄÄÄ¶
- º 19 º    Shortcut Selected
- ÈÍÍÍÍ¼
+ â•”â•â•â•â•â•—
+ â•‘ 14 â•‘    Text Normal fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 15 â•‘    Text Normal back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 16 â•‘    Text Selected fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 17 â•‘    Text Selected back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 18 â•‘    Shortcut Normal
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 19 â•‘    Shortcut Selected
+ â•šâ•â•â•â•â•
 
            CInputLine             CHistory
            ------------------     ---------------
- ÉÍÍÍÍ»
- º 1A º    Passive fore
- ÇÄÄÄÄ¶
- º 1B º    Passive back           back
- ÇÄÄÄÄ¶
- º 1C º    Active fore
- ÇÄÄÄÄ¶
- º 1D º    Active back
- ÇÄÄÄÄ¶
- º 1E º    Selected fore
- ÇÄÄÄÄ¶
- º 1F º    Selected back
- ÇÄÄÄÄ¶
- º 20 º    Arrow
- ÈÍÍÍÍ¼
+ â•”â•â•â•â•â•—
+ â•‘ 1A â•‘    Passive fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 1B â•‘    Passive back           back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 1C â•‘    Active fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 1D â•‘    Active back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 1E â•‘    Selected fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 1F â•‘    Selected back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 20 â•‘    Arrow
+ â•šâ•â•â•â•â•
 
            CButton
- ÉÍÍÍÍ»    ---------------
- º 21 º    Normal fore
- ÇÄÄÄÄ¶
- º 22 º    Normal back
- ÇÄÄÄÄ¶
- º 23 º    Default fore
- ÇÄÄÄÄ¶
- º 24 º    Default back
- ÇÄÄÄÄ¶
- º 25 º    Selected fore
- ÇÄÄÄÄ¶
- º 26 º    Selected back
- ÇÄÄÄÄ¶
- º 27 º    Disabled fore
- ÇÄÄÄÄ¶
- º 28 º    Disabled back
- ÇÄÄÄÄ¶
- º 29 º    Shortcut Normal
- ÇÄÄÄÄ¶
- º 2A º    Shortcut Default
- ÇÄÄÄÄ¶
- º 2B º    Shortcut Selected
- ÇÄÄÄÄ¶
- º 2C º    3D bright
- ÇÄÄÄÄ¶
- º 2D º    3D dark
- ÈÍÍÍÍ¼
+ â•”â•â•â•â•â•—    ---------------
+ â•‘ 21 â•‘    Normal fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 22 â•‘    Normal back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 23 â•‘    Default fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 24 â•‘    Default back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 25 â•‘    Selected fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 26 â•‘    Selected back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 27 â•‘    Disabled fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 28 â•‘    Disabled back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 29 â•‘    Shortcut Normal
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 2A â•‘    Shortcut Default
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 2B â•‘    Shortcut Selected
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 2C â•‘    3D bright
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 2D â•‘    3D dark
+ â•šâ•â•â•â•â•
 
            CCluster
            -------------------
- ÉÍÍÍÍ»
- º 2E º    Text Normal fore
- ÇÄÄÄÄ¶
- º 2F º    Text Normal back
- ÇÄÄÄÄ¶
- º 30 º    Text Selected fore
- ÇÄÄÄÄ¶
- º 31 º    Text Selected back
- ÇÄÄÄÄ¶
- º 32 º    Text Disabled fore
- ÇÄÄÄÄ¶
- º 33 º    Text Disabled back
- ÇÄÄÄÄ¶
- º 34 º    Shortcut Normal
- ÇÄÄÄÄ¶
- º 35 º    Shortcut Selected
- ÇÄÄÄÄ¶
- º 36 º    Text Normal Current
- ÈÍÍÍÍ¼
+ â•”â•â•â•â•â•—
+ â•‘ 2E â•‘    Text Normal fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 2F â•‘    Text Normal back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 30 â•‘    Text Selected fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 31 â•‘    Text Selected back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 32 â•‘    Text Disabled fore
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 33 â•‘    Text Disabled back
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 34 â•‘    Shortcut Normal
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 35 â•‘    Shortcut Selected
+ â•Ÿâ”€â”€â”€â”€â•¢
+ â•‘ 36 â•‘    Text Normal Current
+ â•šâ•â•â•â•â•
 
            CHistoryWindow
            --------------
@@ -432,7 +432,7 @@ const
    43      Back
 
 
-*)
+}
 
 
   CBlueWindow = #14#15#16#17#18#19#20#21#22#23 +
@@ -3294,12 +3294,9 @@ begin
   Bounds.B.X := Bounds.A.X + Range(Bounds.B.X - Bounds.A.X, Min.X, Max.X);
   Bounds.B.Y := Bounds.A.Y + Range(Bounds.B.Y - Bounds.A.Y, Min.Y, Max.Y);
   GetBounds(R);
-(*  if not Bounds.Equals(R) then {GIO - Ğ¾ÑˆĞ¸Ğ±ĞºĞ° Ğ¿Ñ€Ğ¸ Ğ´Ğ²Ğ¸Ğ¶ĞµĞ½Ğ¸Ğ¸}
-  begin*)
   ChangeBounds(Bounds);
   if (Owner <> nil) and (State and sfVisible <> 0) then
     DrawUnderRect(R, nil);
-(*  end;*)
 end;
 
 procedure TView.MakeFirst;
