@@ -846,9 +846,9 @@ Begin
   105    : TrapDescription := 'File not open for output';
   106    : TrapDescription := 'Invalid numeric format';
   150    : TrapDescription := 'Disk is write-protected';
-  152    : TrapDescription := 'Drive not ready'; 
-  154    : TrapDescription := 'CRC error in data'; 
-  156    : TrapDescription := 'Disk seek error'; 
+  152    : TrapDescription := 'Drive not ready';
+  154    : TrapDescription := 'CRC error in data';
+  156    : TrapDescription := 'Disk seek error';
   158    : TrapDescription := 'Sector not found';
   159    : TrapDescription := 'Printer out of paper';
   160    : TrapDescription := 'Device write fault';
@@ -911,9 +911,9 @@ Begin
   105    : TrapDescription := 'Файл не открыт на вывод';
   106    : TrapDescription := 'Неверный числовой формат';
   150    : TrapDescription := 'Диск защищен от записи';
-  152    : TrapDescription := 'Диск не готов'; 
-  154    : TrapDescription := 'Ошибка целостности данных'; 
-  156    : TrapDescription := 'Ошибка поиска диска'; 
+  152    : TrapDescription := 'Диск не готов';
+  154    : TrapDescription := 'Ошибка целостности данных';
+  156    : TrapDescription := 'Ошибка поиска диска';
   158    : TrapDescription := 'Сектор не найден';
   159    : TrapDescription := 'Нет бумаги в принтере';
   160    : TrapDescription := 'Ошибка записи устройства';
