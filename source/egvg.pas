@@ -1,13 +1,13 @@
 {$F+,I-,S-,T-}
 {
-  €ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ€
-  € Unit        : Express Graphics Interface Library                   €
-  € Description : Virtual Graphics Basic Unit                          €
-  € Author      : Tony Berezin                                         €
-  € Version     : X01.00 (internal)                                    €
-  € Release     : 01.05                                                €
-  € Last update : 2-JUN-1994                                           €
-  €‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹€
+  ‚ñà‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñà
+  ‚ñà Unit        : Express Graphics Interface Library                   ‚ñà
+  ‚ñà Description : Virtual Graphics Basic Unit                          ‚ñà
+  ‚ñà Author      : Tony Berezin                                         ‚ñà
+  ‚ñà Version     : X01.00 (internal)                                    ‚ñà
+  ‚ñà Release     : 01.05                                                ‚ñà
+  ‚ñà Last update : 2-JUN-1994                                           ‚ñà
+  ‚ñà‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñà
 }
 
 unit EGVG;
@@ -404,9 +404,9 @@ const
   EmsDeviceLen = 8;
   EmsDeviceStr: array[1..EmsDeviceLen] of Char = 'EMMXXXX0';
 asm
-    cmp    PgNum, 0     { ë´®Ë™Æ¨ ¨†´Æ Ø‡Æ·Ô‚ }
+    cmp    PgNum, 0     { –°–ª–∏—à–∫–æ–º –º–∞–ª–æ –ø—Ä–æ—Å—è—Ç }
     jle    @@Fail
-    cmp    PgNum, 4     { ë´®Ë™Æ¨ ¨≠Æ£Æ Ø‡Æ·Ô‚ }
+    cmp    PgNum, 4     { –°–ª–∏—à–∫–æ–º –º–Ω–æ–≥–æ –ø—Ä–æ—Å—è—Ç }
     jg     @@Fail
     mov    ax, 3567h
     int    21h          { Get vector 67h -> es:bx }
@@ -866,7 +866,7 @@ begin
 {$IFNDEF DPMI}
   CheckRPCI;
 {$ELSE}
-  {Ì‚Æ §´Ô ‚Æ£Æ Á‚Æ°Î Ø‡ÆØ®·Î¢†‚Ï ™Æ§ ≠• ¢ÎßÎ¢†Ô exception 13.}
+  {—ç—Ç–æ –¥–ª—è —Ç–æ–≥–æ —á—Ç–æ–±—ã –ø—Ä–æ–ø–∏—Å—ã–≤–∞—Ç—å –∫–æ–¥ –Ω–µ –≤—ã–∑—ã–≤–∞—è exception 13.}
   asm
     mov bx, cs
     mov ax, 0Ah

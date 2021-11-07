@@ -1,14 +1,14 @@
 {
-  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-  █ Unit        : MZResource 1.00                                      █
-  █               Based upon RscMZ 1.00                                █
-  █ Description : Supports new-executables resources reading           █
-  █                                                                    █
-  █ Author      : Tony Berezin                                         █
-  █════════════════════════════════════════════════════════════════════█
-  █                                                                    █
-  █                                                                    █
-  █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+  тЦИтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦИ
+  тЦИ Unit        : MZResource 1.00                                      тЦИ
+  тЦИ               Based upon RscMZ 1.00                                тЦИ
+  тЦИ Description : Supports new-executables resources reading           тЦИ
+  тЦИ                                                                    тЦИ
+  тЦИ Author      : Tony Berezin                                         тЦИ
+  тЦИтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтЦИ
+  тЦИ                                                                    тЦИ
+  тЦИ                                                                    тЦИ
+  тЦИтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦИ
 }
 {$F+,S+,I-,R-,V-}
 unit MZResource;
@@ -75,16 +75,16 @@ Type
     HiddenNameTable: boolean;     { Default: TRUE }
     Status: Integer;
     Types: PTypeCollection;
-    Names: PNamesCollection;      { Имена за концом таблицы ресурсов }
-    FlatNames: PNamesCollection;  { Имена из RT_NAMETABLE }
+    Names: PNamesCollection;      { ╨Ш╨╝╨╡╨╜╨░ ╨╖╨░ ╨║╨╛╨╜╤Ж╨╛╨╝ ╤В╨░╨▒╨╗╨╕╤Ж╤Л ╤А╨╡╤Б╤Г╤А╤Б╨╛╨▓ }
+    FlatNames: PNamesCollection;  { ╨Ш╨╝╨╡╨╜╨░ ╨╕╨╖ RT_NAMETABLE }
    private
     FName: String;
   end;
 
-{--- Коды типов ресурсов (поле Num типа TType) ---}
-{ Поклонникам MS Windows или OS/2 - ВНИМАНИЕ,
-  коды, приведенные здесь, не однозначно соответсвуют
-  кодам RT_XXXX из windows.h (wintypes.pas) !!! }
+{--- ╨Ъ╨╛╨┤╤Л ╤В╨╕╨┐╨╛╨▓ ╤А╨╡╤Б╤Г╤А╤Б╨╛╨▓ (╨┐╨╛╨╗╨╡ Num ╤В╨╕╨┐╨░ TType) ---}
+{ ╨Я╨╛╨║╨╗╨╛╨╜╨╜╨╕╨║╨░╨╝ MS Windows ╨╕╨╗╨╕ OS/2 - ╨Т╨Э╨Ш╨Ь╨Р╨Э╨Ш╨Х,
+  ╨║╨╛╨┤╤Л, ╨┐╤А╨╕╨▓╨╡╨┤╨╡╨╜╨╜╤Л╨╡ ╨╖╨┤╨╡╤Б╤М, ╨╜╨╡ ╨╛╨┤╨╜╨╛╨╖╨╜╨░╤З╨╜╨╛ ╤Б╨╛╨╛╤В╨▓╨╡╤В╤Б╨▓╤Г╤О╤В
+  ╨║╨╛╨┤╨░╨╝ RT_XXXX ╨╕╨╖ windows.h (wintypes.pas) !!! }
 Const
   mzNamed           = $0000; { Refer this resource type by TType.Name }
   mzCursor          = $0001;
@@ -101,13 +101,13 @@ Const
   mzGroupCursor     = $000E;
   mzNameTable       = $000F;
 
-{--- Коды ошибок ---}
+{--- ╨Ъ╨╛╨┤╤Л ╨╛╤И╨╕╨▒╨╛╨║ ---}
 Const  { Another values means corresponding stream error (stXXXX) constants }
-  mzOK                   = 0;  { Все в порядке }
-  mzIllegalFileFormat    = 1;  { 'Явное не то' }
+  mzOK                   = 0;  { ╨Т╤Б╨╡ ╨▓ ╨┐╨╛╤А╤П╨┤╨║╨╡ }
+  mzIllegalFileFormat    = 1;  { '╨п╨▓╨╜╨╛╨╡ ╨╜╨╡ ╤В╨╛' }
   mzNoMemory             = 2;  { Allocation error }
-  mzFormatNotSupported   = 3;  { 'Такое может быть, но я этого не понимаю' }
-  mzInternal01           = 1001; { Ни в какие ворота не лезет }
+  mzFormatNotSupported   = 3;  { '╨в╨░╨║╨╛╨╡ ╨╝╨╛╨╢╨╡╤В ╨▒╤Л╤В╤М, ╨╜╨╛ ╤П ╤Н╤В╨╛╨│╨╛ ╨╜╨╡ ╨┐╨╛╨╜╨╕╨╝╨░╤О' }
+  mzInternal01           = 1001; { ╨Э╨╕ ╨▓ ╨║╨░╨║╨╕╨╡ ╨▓╨╛╤А╨╛╤В╨░ ╨╜╨╡ ╨╗╨╡╨╖╨╡╤В }
 
 Type
   ResTypeNum2StringProc = function (ResTypeNum: integer): string;
@@ -258,12 +258,12 @@ begin
 end;
 
 {--- MZ-file structures description ---}
-{ Приведены только интересующие нас в данном контексте поля }
+{ ╨Я╤А╨╕╨▓╨╡╨┤╨╡╨╜╤Л ╤В╨╛╨╗╤М╨║╨╛ ╨╕╨╜╤В╨╡╤А╨╡╤Б╤Г╤О╤Й╨╕╨╡ ╨╜╨░╤Б ╨▓ ╨┤╨░╨╜╨╜╨╛╨╝ ╨║╨╛╨╜╤В╨╡╨║╤Б╤В╨╡ ╨┐╨╛╨╗╤П }
 Type
   MZHeader = record
     Signature : Word;  { OFFS = 0     MZ or ZM = 5A4D or 4D5A }
-    DontInterest: array [2..$3C-1] of byte; { Может, по $18 интересно }
-    NewExeOffset: Longint;  { 0 для обычных файлов }
+    DontInterest: array [2..$3C-1] of byte; { ╨Ь╨╛╨╢╨╡╤В, ╨┐╨╛ $18 ╨╕╨╜╤В╨╡╤А╨╡╤Б╨╜╨╛ }
+    NewExeOffset: Longint;  { 0 ╨┤╨╗╤П ╨╛╨▒╤Л╤З╨╜╤Л╤Е ╤Д╨░╨╣╨╗╨╛╨▓ }
   end;
 
 procedure UpperInString(S: PString);
@@ -323,7 +323,7 @@ var
     if ((Stru.Signature <> $5A4D) and (Stru.Signature <> $4D5A)) or (Stru.NewExeOffset = 0) then begin
       Clean1; Status := mzIllegalFileFormat; Exit;
     end;
-    Inp^.Seek(Stru.NewExeOffset);  { На начало заголовка }
+    Inp^.Seek(Stru.NewExeOffset);  { ╨Э╨░ ╨╜╨░╤З╨░╨╗╨╛ ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨░ }
     if InputFails then Exit;
     HdrOffs := Stru.NewExeOffset;
     HeaderFails := False;
@@ -348,18 +348,18 @@ var
       Inp^.Read(DWord, SizeOf(DWord));
       if InputFails then Exit;
       ResTableInfo.Offset := HdrOffs + DWord.LWord;
-      { Нелегальное определение размера - из начала следующей таблицы
-      вычитаем начало нашей таблицы }
+      { ╨Э╨╡╨╗╨╡╨│╨░╨╗╤М╨╜╨╛╨╡ ╨╛╨┐╤А╨╡╨┤╨╡╨╗╨╡╨╜╨╕╨╡ ╤А╨░╨╖╨╝╨╡╤А╨░ - ╨╕╨╖ ╨╜╨░╤З╨░╨╗╨░ ╤Б╨╗╨╡╨┤╤Г╤О╤Й╨╡╨╣ ╤В╨░╨▒╨╗╨╕╤Ж╤Л
+      ╨▓╤Л╤З╨╕╤В╨░╨╡╨╝ ╨╜╨░╤З╨░╨╗╨╛ ╨╜╨░╤И╨╡╨╣ ╤В╨░╨▒╨╗╨╕╤Ж╤Л }
       ResTableInfo.Size := DWord.HWord - DWord.LWord;
       Inp^.Seek(ResTableInfo.Offset);
       if InputFails then Exit;
       ExeType := etNew;
     end else if (Signature = LE) or (Signature = LX) then begin
       Clean1; Status := mzFormatNotSupported; Exit;
-(* { Пока не поддерживаем LINEAR EXECUTABLE file format, ГОРИ ОН ОГНЕМ }
+(* { ╨Я╨╛╨║╨░ ╨╜╨╡ ╨┐╨╛╨┤╨┤╨╡╤А╨╢╨╕╨▓╨░╨╡╨╝ LINEAR EXECUTABLE file format, ╨У╨Ю╨а╨Ш ╨Ю╨Э ╨Ю╨У╨Э╨Х╨Ь }
       Inp^.Read(DWord.LWord, SizeOf(DWord.LWord));
       if InputFails then Exit;
-      if DWord.LWord <> 0 then begin  { Big-endian - это НОНСЕНС }
+      if DWord.LWord <> 0 then begin  { Big-endian - ╤Н╤В╨╛ ╨Э╨Ю╨Э╨б╨Х╨Э╨б }
         Status := mzFormatNotSupported; Clean1; Exit;
       end;
       Inp^.Seek(HdrOffs + $50);
@@ -368,8 +368,8 @@ var
       if InputFails then Exit;
       Inp^.Read(ResTableInfo.Size, SizeOf(ResTableInfo.Size));
       if InputFails then Exit;
-      { Нелегальное определение размера - из начала следующей таблицы
-      вычитаем начало нашей таблицы }
+      { ╨Э╨╡╨╗╨╡╨│╨░╨╗╤М╨╜╨╛╨╡ ╨╛╨┐╤А╨╡╨┤╨╡╨╗╨╡╨╜╨╕╨╡ ╤А╨░╨╖╨╝╨╡╤А╨░ - ╨╕╨╖ ╨╜╨░╤З╨░╨╗╨░ ╤Б╨╗╨╡╨┤╤Г╤О╤Й╨╡╨╣ ╤В╨░╨▒╨╗╨╕╤Ж╤Л
+      ╨▓╤Л╤З╨╕╤В╨░╨╡╨╝ ╨╜╨░╤З╨░╨╗╨╛ ╨╜╨░╤И╨╡╨╣ ╤В╨░╨▒╨╗╨╕╤Ж╤Л }
       ResTableInfo.Size := ResTableInfo.Size - ResTableInfo.Offset;
       Inp^.Seek(ResTableInfo.Offset);
       if InputFails then Exit;
@@ -427,8 +427,8 @@ var
     Inp^.Read(TypeRec, SizeOf(TypeRec));
     if InputFails then Exit;
     if TypeRec.ID = 0 then begin
-      { Позиционируем на конец последнего ресурса, т. е. на начало таблицы
-        имен }
+      { ╨Я╨╛╨╖╨╕╤Ж╨╕╨╛╨╜╨╕╤А╤Г╨╡╨╝ ╨╜╨░ ╨║╨╛╨╜╨╡╤Ж ╨┐╨╛╤Б╨╗╨╡╨┤╨╜╨╡╨│╨╛ ╤А╨╡╤Б╤Г╤А╤Б╨░, ╤В. ╨╡. ╨╜╨░ ╨╜╨░╤З╨░╨╗╨╛ ╤В╨░╨▒╨╗╨╕╤Ж╤Л
+        ╨╕╨╝╨╡╨╜ }
       Inp^.Seek(Inp^.GetPos - SizeOf(TypeRec) + SizeOf(TypeRec.ID));
       if InputFails then Exit;
       LastType := Nil;
@@ -524,8 +524,8 @@ var
   label
     Success;
   begin
-    { В этой функции возможны только файловые ошибки - если не хватает
-     памяти и т.п., то мы считаем, что этих имен просто нет }
+    { ╨Т ╤Н╤В╨╛╨╣ ╤Д╤Г╨╜╨║╤Ж╨╕╨╕ ╨▓╨╛╨╖╨╝╨╛╨╢╨╜╤Л ╤В╨╛╨╗╤М╨║╨╛ ╤Д╨░╨╣╨╗╨╛╨▓╤Л╨╡ ╨╛╤И╨╕╨▒╨║╨╕ - ╨╡╤Б╨╗╨╕ ╨╜╨╡ ╤Е╨▓╨░╤В╨░╨╡╤В
+     ╨┐╨░╨╝╤П╤В╨╕ ╨╕ ╤В.╨┐., ╤В╨╛ ╨╝╤Л ╤Б╤З╨╕╤В╨░╨╡╨╝, ╤З╤В╨╛ ╤Н╤В╨╕╤Е ╨╕╨╝╨╡╨╜ ╨┐╤А╨╛╤Б╤В╨╛ ╨╜╨╡╤В }
     ReadFlatNamesFails := True;
     NameType := FindType(MakeIntResource(mzNameTable));
     if NameType = Nil then goto Success;
@@ -575,21 +575,21 @@ begin
   if FlatNames = Nil then begin
     Clean1; Status := mzNoMemory; Exit;
   end;
-  if (ResTableInfo.Offset = 0) or (ResTableInfo.Size = 0) then begin  { Нету никаких ресурсов }
+  if (ResTableInfo.Offset = 0) or (ResTableInfo.Size = 0) then begin  { ╨Э╨╡╤В╤Г ╨╜╨╕╨║╨░╨║╨╕╤Е ╤А╨╡╤Б╤Г╤А╤Б╨╛╨▓ }
     if Inp<>Nil then Dispose(Inp, Done);
     Read := True; Exit;
   end;
   case ExeType of
     etNew: begin
-      {--- Стоим на начале таблицы ресурсов ---}
+      {--- ╨б╤В╨╛╨╕╨╝ ╨╜╨░ ╨╜╨░╤З╨░╨╗╨╡ ╤В╨░╨▒╨╗╨╕╤Ж╤Л ╤А╨╡╤Б╤Г╤А╤Б╨╛╨▓ ---}
       LastType := Nil;
       repeat
         if not MakeOneType then Exit;
       until LastType = Nil;
-      {--- Заполним FlatNames-коллекцию ---}
+      {--- ╨Ч╨░╨┐╨╛╨╗╨╜╨╕╨╝ FlatNames-╨║╨╛╨╗╨╗╨╡╨║╤Ж╨╕╤О ---}
       if ReadFlatNamesFails then Exit;
-      {--- А теперь установим все имена ---}
-      if Types^.FirstThat(@FillTypeNames)<>Nil then Exit; { Была ошибка }
+      {--- ╨Р ╤В╨╡╨┐╨╡╤А╤М ╤Г╤Б╤В╨░╨╜╨╛╨▓╨╕╨╝ ╨▓╤Б╨╡ ╨╕╨╝╨╡╨╜╨░ ---}
+      if Types^.FirstThat(@FillTypeNames)<>Nil then Exit; { ╨С╤Л╨╗╨░ ╨╛╤И╨╕╨▒╨║╨░ }
       if (FlatNamesTableLength <> 0) and (FlatNamesTable <> Nil) then FreeMem(FlatNamesTable, FlatNamesTableLength);
       FlatNamesTableLength := 0;
       FlatNamesTable := Nil;

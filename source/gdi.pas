@@ -1,13 +1,13 @@
 {$G+,S-,F+}
 {
-  ÛßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßÛ
-  Û Unit        : Graphics Device Interface                            Û
-  Û Description : Virtual Graphics Common Routines                     Û
-  Û Author      : Dmitry Karasik                                       Û
-  Û Version     : X01.00 (internal)                                    Û
-  Û Release     : 01.00                                                Û
-  Û Last update : 26-DEC-1996                                          Û
-  ÛÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÛ
+  â–ˆâ–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–ˆ
+  â–ˆ Unit        : Graphics Device Interface                            â–ˆ
+  â–ˆ Description : Virtual Graphics Common Routines                     â–ˆ
+  â–ˆ Author      : Dmitry Karasik                                       â–ˆ
+  â–ˆ Version     : X01.00 (internal)                                    â–ˆ
+  â–ˆ Release     : 01.00                                                â–ˆ
+  â–ˆ Last update : 26-DEC-1996                                          â–ˆ
+  â–ˆâ–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–ˆ
 
 }
 
@@ -348,7 +348,7 @@ Const
 
   {line patterns - TPaintInfo.LinePattern}
   psNull      = $0000;      {         }
-  psSolid     = $FFFF;      {ÄÄÄÄÄÄÄÄÄ}
+  psSolid     = $FFFF;      {â”€â”€â”€â”€â”€â”€â”€â”€â”€}
   psDash      = $F0F0;      {- - - - -}
   psDot       = $5555;      {.........}
   psDashDot   = $FAFA;      {-.-.-.-.-}
@@ -715,8 +715,8 @@ Begin
     T.Mode      := T.Mode or $10; {<- Views.pmInHeap}
   end else begin
     T.Palette := Palette;
-    {®ç¥­ì ®áâ®à®¦­® - ¥á«¨ ­¥ ãáâ ­®¢«¥­ cbwInit ¨ ¯à®¢®¤¨âáï
-    ®¯¥à æ¨ï ­ ¤ ¯ «¨âà®©, â® ¨§¬¥­ï¥âáï _®à¨£¨­ «ì­ ï_ ¯ «¨âà }
+    {Ğ¾Ñ‡ĞµĞ½ÑŒ Ğ¾ÑÑ‚Ğ¾Ñ€Ğ¾Ğ¶Ğ½Ğ¾ - ĞµÑĞ»Ğ¸ Ğ½Ğµ ÑƒÑÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ»ĞµĞ½ cbwInit Ğ¸ Ğ¿Ñ€Ğ¾Ğ²Ğ¾Ğ´Ğ¸Ñ‚ÑÑ
+    Ğ¾Ğ¿ĞµÑ€Ğ°Ñ†Ğ¸Ñ Ğ½Ğ°Ğ´ Ğ¿Ğ°Ğ»Ğ¸Ñ‚Ñ€Ğ¾Ğ¹, Ñ‚Ğ¾ Ğ¸Ğ·Ğ¼ĞµĞ½ÑĞµÑ‚ÑÑ _Ğ¾Ñ€Ğ¸Ğ³Ğ¸Ğ½Ğ°Ğ»ÑŒĞ½Ğ°Ñ_ Ğ¿Ğ°Ğ»Ğ¸Ñ‚Ñ€Ğ°}
    end;
   if WasFix then Colors := 2;
   C := Colors * 3;
@@ -1548,7 +1548,7 @@ asm
     les di, T
     mov al, es:[di].TPaintInfo.LineWidth
     mov I, al
-    cmp al, 1 {¥á«¨ â®«é¨­  = 1 æ¥­âà¨à®¢ ­¨ï ­¥ âà¥¡ã¥âáï}
+    cmp al, 1 {ĞµÑĞ»Ğ¸ Ñ‚Ğ¾Ğ»Ñ‰Ğ¸Ğ½Ğ° = 1 Ñ†ĞµĞ½Ñ‚Ñ€Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ Ğ½Ğµ Ñ‚Ñ€ĞµĞ±ÑƒĞµÑ‚ÑÑ}
     jbe @@10
     mov cl, al
     shr cl, 1
@@ -1625,7 +1625,7 @@ asm
      call setPixelOp
      jmp @@Pops
  @@Abnormal:
-    {¤«ï «¨­¨¨ á è¨à¨­®© 1 ¨ Style <> lsLinePattern}
+    {Ğ´Ğ»Ñ Ğ»Ğ¸Ğ½Ğ¸Ğ¸ Ñ ÑˆĞ¸Ñ€Ğ¸Ğ½Ğ¾Ğ¹ 1 Ğ¸ Style <> lsLinePattern}
      push cx  {x}
      push dx  {y}
      push cx  {x}
@@ -1661,8 +1661,8 @@ asm
 end;
 End;
 
-{á«¥¤ãîé¨¥ ¤¢¥ ¯à®æ¥¤ãàë § ¤¥àâë ¨§ ª¨¥¢áª®£® Vision'a
-(â¥ ¢ á¢®î ®ç¥à¥¤ì ¨§ .“¨«â®­ ). ¥à¥¤¥«ª¨ _¡ë«¨_.}
+{ÑĞ»ĞµĞ´ÑƒÑÑ‰Ğ¸Ğµ Ğ´Ğ²Ğµ Ğ¿Ñ€Ğ¾Ñ†ĞµĞ´ÑƒÑ€Ñ‹ Ğ·Ğ°Ğ´ĞµÑ€Ñ‚Ñ‹ Ğ¸Ğ· ĞºĞ¸ĞµĞ²ÑĞºĞ¾Ğ³Ğ¾ Vision'a
+(Ñ‚Ğµ Ğ² ÑĞ²Ğ¾Ñ Ğ¾Ñ‡ĞµÑ€ĞµĞ´ÑŒ Ğ¸Ğ· Ğ .Ğ£Ğ¸Ğ»Ñ‚Ğ¾Ğ½Ğ°). ĞŸĞµÑ€ĞµĞ´ĞµĞ»ĞºĞ¸ _Ğ±Ñ‹Ğ»Ğ¸_.}
 procedure FillEllipse(X, Y, Rx, Ry : Integer; var T : TPaintInfo);
 var
   Xc, Yc : Integer;
@@ -1925,8 +1925,8 @@ end;
 
 {procedure trap216; assembler; asm lldt bx end;}
 
-{â  § à §  § ¤¥àâ  ¨§ ¬®áª®¢áª®£® SuperVision'a}
-procedure FillPoly(NumPoints: Word;var Polygon; At : TPoint;var T : TPaintInfo);{‚®«®¤¨­ ‚.€.}
+{Ğ­Ñ‚Ğ° Ğ·Ğ°Ñ€Ğ°Ğ·Ğ° Ğ·Ğ°Ğ´ĞµÑ€Ñ‚Ğ° Ğ¸Ğ· Ğ¼Ğ¾ÑĞºĞ¾Ğ²ÑĞºĞ¾Ğ³Ğ¾ SuperVision'a}
+procedure FillPoly(NumPoints: Word;var Polygon; At : TPoint;var T : TPaintInfo);{Ğ’Ğ¾Ğ»Ğ¾Ğ´Ğ¸Ğ½ Ğ’.Ğ.}
 type
       TPolygon = array[1..16380] of TPoint;
       PPolygon = ^TPolygon;
@@ -2905,7 +2905,7 @@ Begin
       Exit;
     end;
     if Byte(I) = sttEMS then begin
-      {ä¨ªá « ¦¨ EMS}
+      {Ñ„Ğ¸ĞºÑ Ğ»Ğ°Ğ¶Ğ¸ EMS}
       PSImage(P)^.PS^.Seek(0);
       with PSImage(P)^.PS^ do for I := 0 to Height - 1 do
          Write(PSImage(P)^.Buffer^, XSize);

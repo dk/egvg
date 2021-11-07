@@ -1,12 +1,12 @@
 {$G+,F+,S-}
 {
-  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-  █ Unit        : BitMaps                                              █
-  █                                                                    █
-  █ Description : BitMaps handling for Graphic Turbo Vision            █
-  █                                                                    █
-  █ Author      : Tony Berezin, Oleg Oleinick                          █
-  █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+  тЦИтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦИ
+  тЦИ Unit        : BitMaps                                              тЦИ
+  тЦИ                                                                    тЦИ
+  тЦИ Description : BitMaps handling for Graphic Turbo Vision            тЦИ
+  тЦИ                                                                    тЦИ
+  тЦИ Author      : Tony Berezin, Oleg Oleinick                          тЦИ
+  тЦИтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦИ
 }
 unit BitMaps;
 
@@ -125,10 +125,10 @@ begin
   IllegalImage := (not Assigned(Image)) or (Image^.Check <> ImageSign);
 end;
 
-{ К сожалению, сам по себе объект BitMap имеет возможность загрузки
-  из MZ-файла только ресурса ВИДА BITMAP. Так что пришлось иметь
-  отдельные объекты TIcon и TMouseCursor, не содержащие полей
-  вида SomeBitMap: PBitMap, а прописывать их полностью }
+{ ╨Ъ ╤Б╨╛╨╢╨░╨╗╨╡╨╜╨╕╤О, ╤Б╨░╨╝ ╨┐╨╛ ╤Б╨╡╨▒╨╡ ╨╛╨▒╤К╨╡╨║╤В BitMap ╨╕╨╝╨╡╨╡╤В ╨▓╨╛╨╖╨╝╨╛╨╢╨╜╨╛╤Б╤В╤М ╨╖╨░╨│╤А╤Г╨╖╨║╨╕
+  ╨╕╨╖ MZ-╤Д╨░╨╣╨╗╨░ ╤В╨╛╨╗╤М╨║╨╛ ╤А╨╡╤Б╤Г╤А╤Б╨░ ╨Т╨Ш╨Ф╨Р BITMAP. ╨в╨░╨║ ╤З╤В╨╛ ╨┐╤А╨╕╤И╨╗╨╛╤Б╤М ╨╕╨╝╨╡╤В╤М
+  ╨╛╤В╨┤╨╡╨╗╤М╨╜╤Л╨╡ ╨╛╨▒╤К╨╡╨║╤В╤Л TIcon ╨╕ TMouseCursor, ╨╜╨╡ ╤Б╨╛╨┤╨╡╤А╨╢╨░╤Й╨╕╨╡ ╨┐╨╛╨╗╨╡╨╣
+  ╨▓╨╕╨┤╨░ SomeBitMap: PBitMap, ╨░ ╨┐╤А╨╛╨┐╨╕╤Б╤Л╨▓╨░╤В╤М ╨╕╤Е ╨┐╨╛╨╗╨╜╨╛╤Б╤В╤М╤О }
 
 type
   PImageStruct = ^ImageStruct;
@@ -143,9 +143,9 @@ type
 const
   bmIllegal   = 0;
   bmInCode    = 1;
-  bmInHeap    = 2; { Что с этим будешь делать ? }
+  bmInHeap    = 2; { ╨з╤В╨╛ ╤Б ╤Н╤В╨╕╨╝ ╨▒╤Г╨┤╨╡╤И╤М ╨┤╨╡╨╗╨░╤В╤М ? }
   bmInMZFile  = 3;
-  bmDiscardable = 4; { в Heap и может быть освобождено }
+  bmDiscardable = 4; { ╨▓ Heap ╨╕ ╨╝╨╛╨╢╨╡╤В ╨▒╤Л╤В╤М ╨╛╤Б╨▓╨╛╨▒╨╛╨╢╨┤╨╡╨╜╨╛ }
 
   EmptyImage: ImageStruct = (
     Check: ImageSign;
@@ -416,7 +416,7 @@ var
   Res: PRes;
 begin
   LoadBitMap := Nil;
-  {--- Поиск ресурса ---}
+  {--- ╨Я╨╛╨╕╤Б╨║ ╤А╨╡╤Б╤Г╤А╤Б╨░ ---}
   Res := Where^.FindResource(MakeIntResource(mzBitMap), BitmapName);
   if Res = Nil then Exit;
   LoadBitMap := LoadRscBitmap(Where, Res, LP);
@@ -477,9 +477,9 @@ begin
   LoadRscCursor := False;
   MouseCursor.Image := Nil;
 
-  {--- Загрузка ресурса ---}
+  {--- ╨Ч╨░╨│╤А╤Г╨╖╨║╨░ ╤А╨╡╤Б╤Г╤А╤Б╨░ ---}
   if (Res^.Size > $FFF0) or (MaxAvail < Res^.Size) then
-    Exit; { Заведомо недостаточно памяти !!! }
+    Exit; { ╨Ч╨░╨▓╨╡╨┤╨╛╨╝╨╛ ╨╜╨╡╨┤╨╛╤Б╤В╨░╤В╨╛╤З╨╜╨╛ ╨┐╨░╨╝╤П╤В╨╕ !!! }
   Original := MemAlloc( Res^.Size);
   if Original = Nil then Exit;
   if not Where^.ReadResource(Res, Original^) then goto EndOfLoad;
@@ -491,8 +491,8 @@ begin
   Hdr := Pointer(Original);
   Dec(Original, 2);
 
-  if (Hdr^.Size <> WinBMPInfoSize) or  { Только WIN }
-     (Hdr^.Width <> 32) or             { Только 32x32 !!! }
+  if (Hdr^.Size <> WinBMPInfoSize) or  { ╨в╨╛╨╗╤М╨║╨╛ WIN }
+     (Hdr^.Width <> 32) or             { ╨в╨╛╨╗╤М╨║╨╛ 32x32 !!! }
      (Hdr^.Height <> 64) or
      (Hdr^.Planes <> 1) or
      (Hdr^.BitCount <> 1)
@@ -511,7 +511,7 @@ begin
   Dest^ := 32;  { YSize } Inc(Dest);
   Dest^ := 4;  { WIB } Inc(Dest);
   Dest^ := 32;  { XSize } Inc(Dest);
-  Inc(Image, SizeImage*2);  {На конец}
+  Inc(Image, SizeImage*2);  {╨Э╨░ ╨║╨╛╨╜╨╡╤Ж}
   for i := 1 to 64 do begin
     Dec(Image, 4);
     Move(Image^, DestB^, 4);
@@ -540,7 +540,7 @@ var
 begin
   LoadCursor := False;
   MouseCursor.Image := Nil;
-  {--- Поиск ресурса ---}
+  {--- ╨Я╨╛╨╕╤Б╨║ ╤А╨╡╤Б╤Г╤А╤Б╨░ ---}
   Res := Where^.FindResource(MakeIntResource(mzCursor), CursorName);
   if not Assigned(Res) then Exit;
   LoadCursor := LoadRscCursor(Where, Res, MouseCursor);
@@ -573,16 +573,16 @@ begin
   LoadRscIcon := False;
   BitMapAND := Nil; BitMapXOR := Nil;
 
-  {--- Загрузка ресурса ---}
+  {--- ╨Ч╨░╨│╤А╤Г╨╖╨║╨░ ╤А╨╡╤Б╤Г╤А╤Б╨░ ---}
   if (Res^.Size > $FFF0) or (MaxAvail < Res^.Size) then
-    Exit; { Заведомо недостаточно памяти !!! }
+    Exit; { ╨Ч╨░╨▓╨╡╨┤╨╛╨╝╨╛ ╨╜╨╡╨┤╨╛╤Б╤В╨░╤В╨╛╤З╨╜╨╛ ╨┐╨░╨╝╤П╤В╨╕ !!! }
   Original := MemAlloc(Res^.Size);
   if Original = Nil then Exit;
   if not Where^.ReadResource(Res, Original^) then goto EndOfLoad;
 
   Hdr := Pointer(Original);
-  if (Hdr^.Size <> WinBMPInfoSize) or  { Только WIN }
-     (Hdr^.Width <> 32) or             { Только 32x32 !!! }
+  if (Hdr^.Size <> WinBMPInfoSize) or  { ╨в╨╛╨╗╤М╨║╨╛ WIN }
+     (Hdr^.Width <> 32) or             { ╨в╨╛╨╗╤М╨║╨╛ 32x32 !!! }
      (Hdr^.Height <> 64) or
      (Hdr^.Planes <> 1) or
      (Hdr^.BitCount > 8)
@@ -591,7 +591,7 @@ begin
   Image := Pointer(Hdr);
   Inc(Image, Hdr^.Size);  { Skip header }
 
-  { Получаем указатель на палитру }
+  { ╨Я╨╛╨╗╤Г╤З╨░╨╡╨╝ ╤Г╨║╨░╨╖╨░╤В╨╡╨╗╤М ╨╜╨░ ╨┐╨░╨╗╨╕╤В╤А╤Г }
   Pal := pointer(Image);
   PaletteSize := Word(1) shl Hdr^.BitCount;
   CreatePalette(Pal, LP, cbwWindows + cbwInit + cbwCreate16Map, PaletteSize);
@@ -602,7 +602,7 @@ begin
   SizeImage := 128*Hdr^.BitCount;
   BufSize := 128;
 
-  { Перевод изображения во внутренний формат }
+  { ╨Я╨╡╤А╨╡╨▓╨╛╨┤ ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П ╨▓╨╛ ╨▓╨╜╤Г╤В╤А╨╡╨╜╨╜╨╕╨╣ ╤Д╨╛╤А╨╝╨░╤В }
   if MaxAvail < BufSize + SizeImage + 32 then begin
     DisposePalette(LP);
     goto EndOfLoad;
@@ -637,7 +637,7 @@ var
 begin
   LoadIcon := False;
   BitMapAND := Nil; BitMapXOR := Nil;
-  {--- Поиск ресурса ---}
+  {--- ╨Я╨╛╨╕╤Б╨║ ╤А╨╡╤Б╤Г╤А╤Б╨░ ---}
   Res := Where^.FindResource(MakeIntResource(mzIcon), IconName);
   if Res = Nil then Exit;
   LoadIcon := LoadRscIcon(Where, Res, BitMapAND, BitMapXOR);
@@ -663,7 +663,7 @@ begin
     MC^.Image := MemAlloc( 128*2 + 7);
     Move(BitMapAND^.Buffer, MC^.Image^, 128+6);
 
-    { Хитрая функция отображения цветной иконы на черно-белый курсор }
+    { ╨е╨╕╤В╤А╨░╤П ╤Д╤Г╨╜╨║╤Ж╨╕╤П ╨╛╤В╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П ╤Ж╨▓╨╡╤В╨╜╨╛╨╣ ╨╕╨║╨╛╨╜╤Л ╨╜╨░ ╤З╨╡╤А╨╜╨╛-╨▒╨╡╨╗╤Л╨╣ ╨║╤Г╤А╤Б╨╛╤А }
     P := MC^.Image;
     Inc(P, 128+6);
     P1 := PChar(BitMapXOR);
@@ -701,7 +701,7 @@ begin
   if not Assigned(Image) then Exit;
   BufSize := 1 + {GetBitMapBufferSize(ImageStruct^.Width, ImageStruct^.Height);}
     GetImageBufferSize(ImageStruct^.Width, ImageStruct^.Height, ImageStruct^.WIB);
-  { Был распределен лишний байт для краевых эффектов }
+  { ╨С╤Л╨╗ ╤А╨░╤Б╨┐╤А╨╡╨┤╨╡╨╗╨╡╨╜ ╨╗╨╕╤И╨╜╨╕╨╣ ╨▒╨░╨╣╤В ╨┤╨╗╤П ╨║╤А╨░╨╡╨▓╤Л╤Е ╤Н╤Д╤Д╨╡╨║╤В╨╛╨▓ }
   if (BufSize <> 0) then begin
     FreeMem(Image, BufSize);
     Image:= Nil;
@@ -895,7 +895,7 @@ begin
   begin
     Dec(LockLev);
     {$IFDEF DEBUG}
-{ Не нужно генерить ошибку при лишней анлокировке
+{ ╨Э╨╡ ╨╜╤Г╨╢╨╜╨╛ ╨│╨╡╨╜╨╡╤А╨╕╤В╤М ╨╛╤И╨╕╨▒╨║╤Г ╨┐╤А╨╕ ╨╗╨╕╤И╨╜╨╡╨╣ ╨░╨╜╨╗╨╛╨║╨╕╤А╨╛╨▓╨║╨╡
     if LockLev < 0 then
     begin
       PrintStr(^J^M'Too many BITMAPS.Unlock''s'^J^M);
@@ -1029,24 +1029,24 @@ type
     Bits, MPal  :Byte;
   End;
 Var
-  Original  : Pointer;                  {место для заголовка}
+  Original  : Pointer;                  {╨╝╨╡╤Б╤В╨╛ ╨┤╨╗╤П ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨░}
   Image     : PChar;
   Hdr       : PBitMapInfoHeader absolute Original;
   HdrOS2    : PBitMapCoreHeader absolute Original;
-  HdrSize   : LongInt;                  {размер заголовка}
-  TLP       : TLogPalette;              {буфер палитры}
-  Misc      : TMisc;                    {общие данные}
-  PMode     : Word;                     {флаги палитры}
-  Pal       : Pointer;                  {указатель на палитру файла}
-  BPL       : LongInt;                  {байтов на линейку в файле}
-  OurBPL    : Word;                     {байтов на линейку у нас}
-  BitMapImg : PImage;                   {картинка}
+  HdrSize   : LongInt;                  {╤А╨░╨╖╨╝╨╡╤А ╨╖╨░╨│╨╛╨╗╨╛╨▓╨║╨░}
+  TLP       : TLogPalette;              {╨▒╤Г╤Д╨╡╤А ╨┐╨░╨╗╨╕╤В╤А╤Л}
+  Misc      : TMisc;                    {╨╛╨▒╤Й╨╕╨╡ ╨┤╨░╨╜╨╜╤Л╨╡}
+  PMode     : Word;                     {╤Д╨╗╨░╨│╨╕ ╨┐╨░╨╗╨╕╤В╤А╤Л}
+  Pal       : Pointer;                  {╤Г╨║╨░╨╖╨░╤В╨╡╨╗╤М ╨╜╨░ ╨┐╨░╨╗╨╕╤В╤А╤Г ╤Д╨░╨╣╨╗╨░}
+  BPL       : LongInt;                  {╨▒╨░╨╣╤В╨╛╨▓ ╨╜╨░ ╨╗╨╕╨╜╨╡╨╣╨║╤Г ╨▓ ╤Д╨░╨╣╨╗╨╡}
+  OurBPL    : Word;                     {╨▒╨░╨╣╤В╨╛╨▓ ╨╜╨░ ╨╗╨╕╨╜╨╡╨╣╨║╤Г ╤Г ╨╜╨░╤Б}
+  BitMapImg : PImage;                   {╨║╨░╤А╤В╨╕╨╜╨║╨░}
   Streamed  : Boolean;                  {shortcut to IsImageStreamed(BitmapImg)}
-  B, Dest   : PByteArray;               {буфера под конвертор}
+  B, Dest   : PByteArray;               {╨▒╤Г╤Д╨╡╤А╨░ ╨┐╨╛╨┤ ╨║╨╛╨╜╨▓╨╡╤А╤В╨╛╤А}
   PS        : PStream;                  {shortcut to PSImage(BItMapImage)^.PS}
   I         : LongInt;
   _Dest     : PByteArray;
-  ExtraPal  : TLogPalette;              {палитра на время конверсии}
+  ExtraPal  : TLogPalette;              {╨┐╨░╨╗╨╕╤В╤А╨░ ╨╜╨░ ╨▓╤А╨╡╨╝╤П ╨║╨╛╨╜╨▓╨╡╤А╤Б╨╕╨╕}
 
 
 Begin
@@ -1061,7 +1061,7 @@ Begin
      (ColorType <> imHiColor) and
      (ColorType <> imTC)      then ColorType := 0;
 
-  {--- Загрузка ресурса ---}
+  {--- ╨Ч╨░╨│╤А╤Г╨╖╨║╨░ ╤А╨╡╤Б╤Г╤А╤Б╨░ ---}
   S.Read(HDRSize, 4); {header}
   Inc(HDRSize, 1024);
   S.Seek(S.GetPos - 4);
@@ -1069,9 +1069,9 @@ Begin
   if Original = Nil then Exit;
   S.Read(Original^, HDRSize - 1024);
 
-  {--- Анализ ресурса ---}
+  {--- ╨Р╨╜╨░╨╗╨╕╨╖ ╤А╨╡╤Б╤Г╤А╤Б╨░ ---}
   if Hdr^.Size in [WinBMPInfoSize, OtherBMPInfoSize] then begin
-    if Hdr^.Compression <> 0 then goto EndOfLoad; { Упакованные BMP's пока не обрабатываются }
+    if Hdr^.Compression <> 0 then goto EndOfLoad; { ╨г╨┐╨░╨║╨╛╨▓╨░╨╜╨╜╤Л╨╡ BMP's ╨┐╨╛╨║╨░ ╨╜╨╡ ╨╛╨▒╤А╨░╨▒╨░╤В╤Л╨▓╨░╤О╤В╤Б╤П }
     Misc.X := Hdr^.Width;
     Misc.Y := Hdr^.Height;
     Misc.Bits := Hdr^.BitCount;
@@ -1083,24 +1083,24 @@ Begin
     Misc.Bits := HdrOS2^.BitCount;
     Misc.MPal := 3;
     PMode := cbwOS2 + cbwInit;
-  end else goto EndOfLoad;  { Неизвестный мне тип BitMap'а }
+  end else goto EndOfLoad;  { ╨Э╨╡╨╕╨╖╨▓╨╡╤Б╤В╨╜╤Л╨╣ ╨╝╨╜╨╡ ╤В╨╕╨┐ BitMap'╨░ }
 
-  { установка типа загрузки при default load }
+  { ╤Г╤Б╤В╨░╨╜╨╛╨▓╨║╨░ ╤В╨╕╨┐╨░ ╨╖╨░╨│╤А╤Г╨╖╨║╨╕ ╨┐╤А╨╕ default load }
   if ColorType = imNone then case Misc.Bits of
   1 : ColorType := imMono;
   4 : ColorType := im16;
   8 : ColorType := im256;
  24 : ColorType := imTC;
-  else goto EndOfLoad; end;  { Неизвестный мне тип BitMap'а }
+  else goto EndOfLoad; end;  { ╨Э╨╡╨╕╨╖╨▓╨╡╤Б╤В╨╜╤Л╨╣ ╨╝╨╜╨╡ ╤В╨╕╨┐ BitMap'╨░ }
 
-  {установка флагов палитры для понижающей конверсии}
+  {╤Г╤Б╤В╨░╨╜╨╛╨▓╨║╨░ ╤Д╨╗╨░╨│╨╛╨▓ ╨┐╨░╨╗╨╕╤В╤А╤Л ╨┤╨╗╤П ╨┐╨╛╨╜╨╕╨╢╨░╤О╤Й╨╡╨╣ ╨║╨╛╨╜╨▓╨╡╤А╤Б╨╕╨╕}
   PMode := PMode or cbwMonoFix;
   if ColorType = im16                         then PMode := PMode or cbwCreate16Map;
   if (ColorType = im16)  and (Misc.Bits = 24) then PMode := PMode or cbwCreate256Map;
   if (ColorType = im256) and (Misc.Bits = 24) then PMode := PMode or cbwCreate256Map;
 
 
-  {--- Анализ цветовой гаммы изображения ---}
+  {--- ╨Р╨╜╨░╨╗╨╕╨╖ ╤Ж╨▓╨╡╤В╨╛╨▓╨╛╨╣ ╨│╨░╨╝╨╝╤Л ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П ---}
   case Misc.Bits of
   1: Misc.Colors := 2;
   4:
@@ -1112,16 +1112,16 @@ Begin
     Misc.Colors := 0;
     PMode := PMode and not (cbwWindows or cbwOS2);
   end;
-  else Goto EndOfLoad; end; { Необрабатываемый либо неверный тип изображения }
+  else Goto EndOfLoad; end; { ╨Э╨╡╨╛╨▒╤А╨░╨▒╨░╤В╤Л╨▓╨░╨╡╨╝╤Л╨╣ ╨╗╨╕╨▒╨╛ ╨╜╨╡╨▓╨╡╤А╨╜╤Л╨╣ ╤В╨╕╨┐ ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П }
 
   S.Read(Pointer(LongInt(Original) + HDRSize - 1024)^, Misc.Colors * Misc.MPal);
-  { Получаем указатель на палитру }
+  { ╨Я╨╛╨╗╤Г╤З╨░╨╡╨╝ ╤Г╨║╨░╨╖╨░╤В╨╡╨╗╤М ╨╜╨░ ╨┐╨░╨╗╨╕╤В╤А╤Г }
   Image := Original;
   Inc(Image, Hdr^.Size);  { Skip header }
   Pal := pointer(Image);
 
-  {подготовка, если надо, палитры для диферинга, который требует палитры
-  от исходной картинки}
+  {╨┐╨╛╨┤╨│╨╛╤В╨╛╨▓╨║╨░, ╨╡╤Б╨╗╨╕ ╨╜╨░╨┤╨╛, ╨┐╨░╨╗╨╕╤В╤А╤Л ╨┤╨╗╤П ╨┤╨╕╤Д╨╡╤А╨╕╨╜╨│╨░, ╨║╨╛╤В╨╛╤А╤Л╨╣ ╤В╤А╨╡╨▒╤Г╨╡╤В ╨┐╨░╨╗╨╕╤В╤А╤Л
+  ╨╛╤В ╨╕╤Б╤Е╨╛╨┤╨╜╨╛╨╣ ╨║╨░╤А╤В╨╕╨╜╨║╨╕}
   FillChar(ExtraPal, SizeOf(TLogPalette), 0);
   case ColorType of
   imMono : begin
@@ -1143,8 +1143,8 @@ Begin
     end;
   end;
   imHiColor, imTC : begin
-      {Для совсем бестолковых, которые загружают в 1/16/256-видеорежимах
-      что-то как HiColor/TrueColor, палитра на всякий случай}
+      {╨Ф╨╗╤П ╤Б╨╛╨▓╤Б╨╡╨╝ ╨▒╨╡╤Б╤В╨╛╨╗╨║╨╛╨▓╤Л╤Е, ╨║╨╛╤В╨╛╤А╤Л╨╡ ╨╖╨░╨│╤А╤Г╨╢╨░╤О╤В ╨▓ 1/16/256-╨▓╨╕╨┤╨╡╨╛╤А╨╡╨╢╨╕╨╝╨░╤Е
+      ╤З╤В╨╛-╤В╨╛ ╨║╨░╨║ HiColor/TrueColor, ╨┐╨░╨╗╨╕╤В╤А╨░ ╨╜╨░ ╨▓╤Б╤П╨║╨╕╨╣ ╤Б╨╗╤Г╤З╨░╨╣}
       if ColorType = imHiColor then
         CreatePalette(Pal, ExtraPal, PMode or cbwCreateHCMap, Word(1) shl Misc.Bits)
       else
@@ -1155,12 +1155,12 @@ Begin
     end;
   else end;
 
-  {создаем результирующую палитру }
+  {╤Б╨╛╨╖╨┤╨░╨╡╨╝ ╤А╨╡╨╖╤Г╨╗╤М╤В╨╕╤А╤Г╤О╤Й╤Г╤О ╨┐╨░╨╗╨╕╤В╤А╤Г }
   if Misc.Colors > 0 then begin
     Inc(Image, Misc.Colors * Misc.MPal);  { Skip palette info }
     CreatePalette(Pal, LP^, PMode, Misc.Colors);
   end else CreatePalette(@StdVGAPalette, LP^, PMode, 256);
-  {заполняем стандартную моно палитру для рез-тов диферинга}
+  {╨╖╨░╨┐╨╛╨╗╨╜╤П╨╡╨╝ ╤Б╤В╨░╨╜╨┤╨░╤А╤В╨╜╤Г╤О ╨╝╨╛╨╜╨╛ ╨┐╨░╨╗╨╕╤В╤А╤Г ╨┤╨╗╤П ╤А╨╡╨╖-╤В╨╛╨▓ ╨┤╨╕╤Д╨╡╤А╨╕╨╜╨│╨░}
   if Misc.Colors = 2 then begin
     if (Misc.Bits > 1) then begin
       FillChar(LP^.Palette^[0], 3, 0);
@@ -1171,14 +1171,14 @@ Begin
     if LP^.ColorRef^[1] > 0 then LP^.ColorRef^[1] := 1;
   end;
 
-  {--- Анализ размеров изображения ---}
+  {--- ╨Р╨╜╨░╨╗╨╕╨╖ ╤А╨░╨╖╨╝╨╡╤А╨╛╨▓ ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П ---}
   if (Hdr^.Size <> WinBMPInfoSize) or (Hdr^.SizeImage = 0) then
     BPL := Size - Hdr^.Size - (Word(1) shl Misc.Bits) * Misc.MPal
   else
     BPL := Hdr^.SizeImage;
   BPL := BPL div Misc.Y;
 
-  {место под картинку}
+  {╨╝╨╡╤Б╤В╨╛ ╨┐╨╛╨┤ ╨║╨░╤А╤В╨╕╨╜╨║╤Г}
   BitMapImg := CreateDImageIndirect(Misc.X, Misc.Y, ColorType, 0);
   if BitmapImg = Nil then Goto EndOfLoad;
   Dest := PByteArray(LongInt(BitmapImg) + 8);
@@ -1197,7 +1197,7 @@ Begin
   for I := 0 to Misc.Y - 1 do begin
     S.Read(B^, BPL);
 
-    {конверсия}
+    {╨║╨╛╨╜╨▓╨╡╤А╤Б╨╕╤П}
     case Misc.Bits of
     1  : case ColorType of
       im16     : begin

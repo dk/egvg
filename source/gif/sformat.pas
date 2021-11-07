@@ -2,15 +2,15 @@
 {                                                       }
 {                SFormat  unit                          }
 {                                                       }
-{     Инструментальный пакет для работы с файлами -     }
-{     изображениями в форматах GIF, PCX и TIFF          }
+{     ╨Ш╨╜╤Б╤В╤А╤Г╨╝╨╡╨╜╤В╨░╨╗╤М╨╜╤Л╨╣ ╨┐╨░╨║╨╡╤В ╨┤╨╗╤П ╤А╨░╨▒╨╛╤В╤Л ╤Б ╤Д╨░╨╣╨╗╨░╨╝╨╕ -     }
+{     ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П╨╝╨╕ ╨▓ ╤Д╨╛╤А╨╝╨░╤В╨░╤Е GIF, PCX ╨╕ TIFF          }
 {                                                       }
-{     Копирование запрещено (С), 1993, В.А.Кашкаров     }
-{     НТЦ "Модуль", Москва, Россия                      }
+{     ╨Ъ╨╛╨┐╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡ ╨╖╨░╨┐╤А╨╡╤Й╨╡╨╜╨╛ (╨б), 1993, ╨Т.╨Р.╨Ъ╨░╤И╨║╨░╤А╨╛╨▓     }
+{     ╨Э╨в╨ж "╨Ь╨╛╨┤╤Г╨╗╤М", ╨Ь╨╛╤Б╨║╨▓╨░, ╨а╨╛╤Б╤Б╨╕╤П                      }
 {                                                       }
 {     Copyright (C) 1993, Vitaly.A.Kashkarov            }
 {     RC Module, Moscow, Russia                         }
-{                                      Апрель 1993 г.   }
+{                                      ╨Р╨┐╤А╨╡╨╗╤М 1993 ╨│.   }
 {                                                       }
 {*******************************************************}
 
@@ -25,7 +25,7 @@ uses Objects,
 
   const
 
-{ Коды ошибок }
+{ ╨Ъ╨╛╨┤╤Л ╨╛╤И╨╕╨▒╨╛╨║ }
 
     NoErrors        = 0;
     CantOpenFile    = 101;
@@ -41,29 +41,29 @@ uses Objects,
     BadCode         = 111;
     PaletteError    = 112;
 
-{Константа управления памятью }
+{╨Ъ╨╛╨╜╤Б╤В╨░╨╜╤В╨░ ╤Г╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╤П ╨┐╨░╨╝╤П╤В╤М╤О }
 
     BlockSize = 16384;
 
-{ Флаги расположения битовых плоскостей }
+{ ╨д╨╗╨░╨│╨╕ ╤А╨░╤Б╨┐╨╛╨╗╨╛╨╢╨╡╨╜╨╕╤П ╨▒╨╕╤В╨╛╨▓╤Л╤Е ╨┐╨╗╨╛╤Б╨║╨╛╤Б╤В╨╡╨╣ }
 
     fBGIPlanes    = $00;
     fSGraphPlanes = $01;
 
-{ Константы формата GIF }
+{ ╨Ъ╨╛╨╜╤Б╤В╨░╨╜╤В╤Л ╤Д╨╛╤А╨╝╨░╤В╨░ GIF }
 
     GifSignature = 'GIF87a';
     ImageDescPtr = $2C;
     Terminator   = $3B;
 
-{ Константы формата PCX }
+{ ╨Ъ╨╛╨╜╤Б╤В╨░╨╜╤В╤Л ╤Д╨╛╤А╨╝╨░╤В╨░ PCX }
 
     Manuf         : byte    = 10;
     Hard          : byte    = 5;
     Encod         : byte    = 1;
     RasterDataPtr : longint = 128;
 
-{ Константы формата TIFF }
+{ ╨Ъ╨╛╨╜╤Б╤В╨░╨╜╤В╤Л ╤Д╨╛╤А╨╝╨░╤В╨░ TIFF }
 
     MaxDirSize = 1000;
 
@@ -72,7 +72,7 @@ uses Objects,
   PsByteBuff = ^TsByteBuff;
   TsByteBuff = array[0..255] of byte;
 
-{ Типы палитр }
+{ ╨в╨╕╨┐╤Л ╨┐╨░╨╗╨╕╤В╤А }
 
     PsVGAMap = ^TsVGAMap;
     TsVGAMap = array[0..255,0..2] of byte;
@@ -92,54 +92,54 @@ uses Objects,
       end;
 
 
-{ Внешние типы формата GIF }
+{ ╨Т╨╜╨╡╤И╨╜╨╕╨╡ ╤В╨╕╨┐╤Л ╤Д╨╛╤А╨╝╨░╤В╨░ GIF }
 
-    LineOrderType   = (Seq, Interl);           { Последовательность строк   }
+    LineOrderType   = (Seq, Interl);           { ╨Я╨╛╤Б╨╗╨╡╨┤╨╛╨▓╨░╤В╨╡╨╗╤М╨╜╨╛╤Б╤В╤М ╤Б╤В╤А╨╛╨║   }
 
     PsScreenDescriptor = ^TsScreenDescriptor;
-    TsScreenDescriptor =                       { Описатель экрана           }
+    TsScreenDescriptor =                       { ╨Ю╨┐╨╕╤Б╨░╤В╨╡╨╗╤М ╤Н╨║╤А╨░╨╜╨░           }
        record
-         Width          : word;                { Ширина экрана              }
-         Height         : word;                { Высота экрана              }
-         GlobColorMap   : boolean;             { Наличие глобальной палитры }
-         ColorRes       : byte;                { Кол-во битов на цвет       }
-         BitPerPix      : byte;                { Кол-во битов на пиксел     }
-         BackGround     : byte                 { Цвет фона                  }
+         Width          : word;                { ╨и╨╕╤А╨╕╨╜╨░ ╤Н╨║╤А╨░╨╜╨░              }
+         Height         : word;                { ╨Т╤Л╤Б╨╛╤В╨░ ╤Н╨║╤А╨░╨╜╨░              }
+         GlobColorMap   : boolean;             { ╨Э╨░╨╗╨╕╤З╨╕╨╡ ╨│╨╗╨╛╨▒╨░╨╗╤М╨╜╨╛╨╣ ╨┐╨░╨╗╨╕╤В╤А╤Л }
+         ColorRes       : byte;                { ╨Ъ╨╛╨╗-╨▓╨╛ ╨▒╨╕╤В╨╛╨▓ ╨╜╨░ ╤Ж╨▓╨╡╤В       }
+         BitPerPix      : byte;                { ╨Ъ╨╛╨╗-╨▓╨╛ ╨▒╨╕╤В╨╛╨▓ ╨╜╨░ ╨┐╨╕╨║╤Б╨╡╨╗     }
+         BackGround     : byte                 { ╨ж╨▓╨╡╤В ╤Д╨╛╨╜╨░                  }
        end;
 
     PsImageDescriptor = ^TsImageDescriptor;
-    TsImageDescriptor =                        { Описатель  изображения     }
+    TsImageDescriptor =                        { ╨Ю╨┐╨╕╤Б╨░╤В╨╡╨╗╤М  ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П     }
        record
-         Left           : word;                { Координаты левого          }
-         Top            : word;                {            верхнего угла   }
-         Width          : word;                { Ширина  изображения        }
-         Height         : word;                { Высота  изображения        }
-         LocColorMap    : boolean;             { Наличие локальной палитры  }
-         LineOrder      : LineOrderType;       { Последовательность строк   }
-         BitPerPix      : byte                 { Кол-во битов на пиксел,    }
-       end;                                    {   при условии  наличия     }
-                                               {   локальной палитры        }
-{ Внешние типы формата PCX }
+         Left           : word;                { ╨Ъ╨╛╨╛╤А╨┤╨╕╨╜╨░╤В╤Л ╨╗╨╡╨▓╨╛╨│╨╛          }
+         Top            : word;                {            ╨▓╨╡╤А╤Е╨╜╨╡╨│╨╛ ╤Г╨│╨╗╨░   }
+         Width          : word;                { ╨и╨╕╤А╨╕╨╜╨░  ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П        }
+         Height         : word;                { ╨Т╤Л╤Б╨╛╤В╨░  ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П        }
+         LocColorMap    : boolean;             { ╨Э╨░╨╗╨╕╤З╨╕╨╡ ╨╗╨╛╨║╨░╨╗╤М╨╜╨╛╨╣ ╨┐╨░╨╗╨╕╤В╤А╤Л  }
+         LineOrder      : LineOrderType;       { ╨Я╨╛╤Б╨╗╨╡╨┤╨╛╨▓╨░╤В╨╡╨╗╤М╨╜╨╛╤Б╤В╤М ╤Б╤В╤А╨╛╨║   }
+         BitPerPix      : byte                 { ╨Ъ╨╛╨╗-╨▓╨╛ ╨▒╨╕╤В╨╛╨▓ ╨╜╨░ ╨┐╨╕╨║╤Б╨╡╨╗,    }
+       end;                                    {   ╨┐╤А╨╕ ╤Г╤Б╨╗╨╛╨▓╨╕╨╕  ╨╜╨░╨╗╨╕╤З╨╕╤П     }
+                                               {   ╨╗╨╛╨║╨░╨╗╤М╨╜╨╛╨╣ ╨┐╨░╨╗╨╕╤В╤А╤Л        }
+{ ╨Т╨╜╨╡╤И╨╜╨╕╨╡ ╤В╨╕╨┐╤Л ╤Д╨╛╤А╨╝╨░╤В╨░ PCX }
 
     PspcxHeader = ^TspcxHeader;
     TspcxHeader =
       record
-        BitPerPix  : byte;                     { Бит на точку в одной плоск.}
-        Left       : word;                     { Размеры картинки(включит.) }
+        BitPerPix  : byte;                     { ╨С╨╕╤В ╨╜╨░ ╤В╨╛╤З╨║╤Г ╨▓ ╨╛╨┤╨╜╨╛╨╣ ╨┐╨╗╨╛╤Б╨║.}
+        Left       : word;                     { ╨а╨░╨╖╨╝╨╡╤А╤Л ╨║╨░╤А╤В╨╕╨╜╨║╨╕(╨▓╨║╨╗╤О╤З╨╕╤В.) }
         Top        : word;                     {                            }
         Right      : word;                     {                            }
         Bottom     : word;                     {                            }
-        HScrRes    : word;                     { Гориз.разрешение дисплея   }
-        VScrRes    : word;                     { Вертик.разрешение дисплея  }
-        EGAPlt     : array[0..15,0..2] of byte;{ Палитра                    }
-        nPlanes    : byte;                     { Кол-во плоскостей          }
-        BytePerLin : word;                     { Байт на строку             }
-        PltInfo    : word;                     { Инф.о палитре (1=цв.,2=сер)}
-        ScanHRes   : word;                     { Разрешение сканнера        }
+        HScrRes    : word;                     { ╨У╨╛╤А╨╕╨╖.╤А╨░╨╖╤А╨╡╤И╨╡╨╜╨╕╨╡ ╨┤╨╕╤Б╨┐╨╗╨╡╤П   }
+        VScrRes    : word;                     { ╨Т╨╡╤А╤В╨╕╨║.╤А╨░╨╖╤А╨╡╤И╨╡╨╜╨╕╨╡ ╨┤╨╕╤Б╨┐╨╗╨╡╤П  }
+        EGAPlt     : array[0..15,0..2] of byte;{ ╨Я╨░╨╗╨╕╤В╤А╨░                    }
+        nPlanes    : byte;                     { ╨Ъ╨╛╨╗-╨▓╨╛ ╨┐╨╗╨╛╤Б╨║╨╛╤Б╤В╨╡╨╣          }
+        BytePerLin : word;                     { ╨С╨░╨╣╤В ╨╜╨░ ╤Б╤В╤А╨╛╨║╤Г             }
+        PltInfo    : word;                     { ╨Ш╨╜╤Д.╨╛ ╨┐╨░╨╗╨╕╤В╤А╨╡ (1=╤Ж╨▓.,2=╤Б╨╡╤А)}
+        ScanHRes   : word;                     { ╨а╨░╨╖╤А╨╡╤И╨╡╨╜╨╕╨╡ ╤Б╨║╨░╨╜╨╜╨╡╤А╨░        }
         ScanVRes   : word;                     {                            }
       end;
 
-{ Внешние типы формата TIFF }
+{ ╨Т╨╜╨╡╤И╨╜╨╕╨╡ ╤В╨╕╨┐╤Л ╤Д╨╛╤А╨╝╨░╤В╨░ TIFF }
 
     OrderType = (Motorolla, Intel);
     CompType  = (NoCompression, ModifiedCCITT);
@@ -148,17 +148,17 @@ uses Objects,
     PsUserData = ^TsUserData;
     TsUserData =
       record
-        ByteOrder : OrderType;                 { Послед-ть байтов в слове   }
-        Width     : word;                      { Гориз. размер изобр-ния    }
-        Height    : word;                      { Вертик. размер изобр-ния   }
-        BitPerPix : byte;                      { Кол-во бит на пиксель      }
-        ColorRes  : byte;                      { Кол-во битов на цвет       }
-        Compress  : CompType;                  { Тип сжатия изображения     }
-        ColorType : ColType;                   { Тип палитры                }
+        ByteOrder : OrderType;                 { ╨Я╨╛╤Б╨╗╨╡╨┤-╤В╤М ╨▒╨░╨╣╤В╨╛╨▓ ╨▓ ╤Б╨╗╨╛╨▓╨╡   }
+        Width     : word;                      { ╨У╨╛╤А╨╕╨╖. ╤А╨░╨╖╨╝╨╡╤А ╨╕╨╖╨╛╨▒╤А-╨╜╨╕╤П    }
+        Height    : word;                      { ╨Т╨╡╤А╤В╨╕╨║. ╤А╨░╨╖╨╝╨╡╤А ╨╕╨╖╨╛╨▒╤А-╨╜╨╕╤П   }
+        BitPerPix : byte;                      { ╨Ъ╨╛╨╗-╨▓╨╛ ╨▒╨╕╤В ╨╜╨░ ╨┐╨╕╨║╤Б╨╡╨╗╤М      }
+        ColorRes  : byte;                      { ╨Ъ╨╛╨╗-╨▓╨╛ ╨▒╨╕╤В╨╛╨▓ ╨╜╨░ ╤Ж╨▓╨╡╤В       }
+        Compress  : CompType;                  { ╨в╨╕╨┐ ╤Б╨╢╨░╤В╨╕╤П ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П     }
+        ColorType : ColType;                   { ╨в╨╕╨┐ ╨┐╨░╨╗╨╕╤В╤А╤Л                }
       end;
 
 
-{ Внутренние типы формата GIF }
+{ ╨Т╨╜╤Г╤В╤А╨╡╨╜╨╜╨╕╨╡ ╤В╨╕╨┐╤Л ╤Д╨╛╤А╨╝╨░╤В╨░ GIF }
 
     PsBuf = ^TsBuf;
     TsBuf = array[0..16383] of byte;
@@ -186,7 +186,7 @@ uses Objects,
 
     TsGifStatus  = (stRead, stWrite, stNormal);
 
-{ Внутренние типы формата PCX }
+{ ╨Т╨╜╤Г╤В╤А╨╡╨╜╨╜╨╕╨╡ ╤В╨╕╨┐╤Л ╤Д╨╛╤А╨╝╨░╤В╨░ PCX }
 
     PsPCXBuf = ^TsPCXBuf;
     TsPCXBuf = array[0..BlockSize] of byte;
@@ -214,7 +214,7 @@ uses Objects,
         svres : word
       end;
 
-{ Внутренние типы формата TIFF}
+{ ╨Т╨╜╤Г╤В╤А╨╡╨╜╨╜╨╕╨╡ ╤В╨╕╨┐╤Л ╤Д╨╛╤А╨╝╨░╤В╨░ TIFF}
 
 
     PsLongArray = ^TsLongArray;
@@ -277,14 +277,14 @@ uses Objects,
   WOffsets = array[1..1024] of word;
 
 
-{ Общие внутренние типы }
+{ ╨Ю╨▒╤Й╨╕╨╡ ╨▓╨╜╤Г╤В╤А╨╡╨╜╨╜╨╕╨╡ ╤В╨╕╨┐╤Л }
 
     TsMode       = (mOpen,mCreate);
 
     PsByte = ^TsByte;
     TsByte = array[0..65500] of byte;
 
-{Основной об'ект }
+{╨Ю╤Б╨╜╨╛╨▓╨╜╨╛╨╣ ╨╛╨▒'╨╡╨║╤В }
 
     PsFormat = ^TsFormat;
     TsFormat =
@@ -333,9 +333,9 @@ uses Objects,
 
       end;
 
-{ Наследники объекта TFormat }
+{ ╨Э╨░╤Б╨╗╨╡╨┤╨╜╨╕╨║╨╕ ╨╛╨▒╤К╨╡╨║╤В╨░ TFormat }
 
-{ Объект для работы с форматом  GIF }
+{ ╨Ю╨▒╤К╨╡╨║╤В ╨┤╨╗╤П ╤А╨░╨▒╨╛╤В╤Л ╤Б ╤Д╨╛╤А╨╝╨░╤В╨╛╨╝  GIF }
 
     PsGif = ^TsGif;
     TsGif =
@@ -348,22 +348,22 @@ uses Objects,
 
         constructor Open(FName : FNameStr);
 
-        constructor Create(FName          : FNameStr; { Имя файла                  }
-                           ScreenWidth    : word;     { Гориз.разрешение дисплея   }
-                           ScreenHeight   : word;     { Вертик.разрешение дисплея  }
-                           GlobalColorMap : boolean;  { Глобальная палитра         }
-                           ScrColorRes    : byte;     { Кол-во битов на цвет       }
-                           ScrBitPerPix   : byte;     { Кол-во бит на пиксель      }
-                           BGround        : byte   ); { Цвет фона                  }
+        constructor Create(FName          : FNameStr; { ╨Ш╨╝╤П ╤Д╨░╨╣╨╗╨░                  }
+                           ScreenWidth    : word;     { ╨У╨╛╤А╨╕╨╖.╤А╨░╨╖╤А╨╡╤И╨╡╨╜╨╕╨╡ ╨┤╨╕╤Б╨┐╨╗╨╡╤П   }
+                           ScreenHeight   : word;     { ╨Т╨╡╤А╤В╨╕╨║.╤А╨░╨╖╤А╨╡╤И╨╡╨╜╨╕╨╡ ╨┤╨╕╤Б╨┐╨╗╨╡╤П  }
+                           GlobalColorMap : boolean;  { ╨У╨╗╨╛╨▒╨░╨╗╤М╨╜╨░╤П ╨┐╨░╨╗╨╕╤В╤А╨░         }
+                           ScrColorRes    : byte;     { ╨Ъ╨╛╨╗-╨▓╨╛ ╨▒╨╕╤В╨╛╨▓ ╨╜╨░ ╤Ж╨▓╨╡╤В       }
+                           ScrBitPerPix   : byte;     { ╨Ъ╨╛╨╗-╨▓╨╛ ╨▒╨╕╤В ╨╜╨░ ╨┐╨╕╨║╤Б╨╡╨╗╤М      }
+                           BGround        : byte   ); { ╨ж╨▓╨╡╤В ╤Д╨╛╨╜╨░                  }
 
-        procedure CreateNewLocImage(ImageLeft      : word;          { Координаты левого          }
-                                    ImageTop       : word;          {            верхнего угла   }
-                                    ImageWidth     : word;          { Ширина  изображения        }
-                                    ImageHeight    : word;          { Высота  изображения        }
-                                    LocalColorMap  : boolean;       { Локальная палитра          }
-                                    ImgLineOrder   : LineOrderType; { Порядок строк в изображении}
-                                    ImgBitPerPix   : byte       );  { Кол-во бит на пиксель      }
-                                                                    { при наличии лок. палитры   }
+        procedure CreateNewLocImage(ImageLeft      : word;          { ╨Ъ╨╛╨╛╤А╨┤╨╕╨╜╨░╤В╤Л ╨╗╨╡╨▓╨╛╨│╨╛          }
+                                    ImageTop       : word;          {            ╨▓╨╡╤А╤Е╨╜╨╡╨│╨╛ ╤Г╨│╨╗╨░   }
+                                    ImageWidth     : word;          { ╨и╨╕╤А╨╕╨╜╨░  ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П        }
+                                    ImageHeight    : word;          { ╨Т╤Л╤Б╨╛╤В╨░  ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П        }
+                                    LocalColorMap  : boolean;       { ╨Ы╨╛╨║╨░╨╗╤М╨╜╨░╤П ╨┐╨░╨╗╨╕╤В╤А╨░          }
+                                    ImgLineOrder   : LineOrderType; { ╨Я╨╛╤А╤П╨┤╨╛╨║ ╤Б╤В╤А╨╛╨║ ╨▓ ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╕}
+                                    ImgBitPerPix   : byte       );  { ╨Ъ╨╛╨╗-╨▓╨╛ ╨▒╨╕╤В ╨╜╨░ ╨┐╨╕╨║╤Б╨╡╨╗╤М      }
+                                                                    { ╨┐╤А╨╕ ╨╜╨░╨╗╨╕╤З╨╕╨╕ ╨╗╨╛╨║. ╨┐╨░╨╗╨╕╤В╤А╤Л   }
 
         procedure  ReadNewLocImage;
 
@@ -426,7 +426,7 @@ uses Objects,
 
       end;
 
-{ Объект для работы с форматом  PCX }
+{ ╨Ю╨▒╤К╨╡╨║╤В ╨┤╨╗╤П ╤А╨░╨▒╨╛╤В╤Л ╤Б ╤Д╨╛╤А╨╝╨░╤В╨╛╨╝  PCX }
 
   PsPCX = ^TsPCX;
   TsPCX =
@@ -436,17 +436,17 @@ uses Objects,
 
       constructor Open(FName : FNameStr);
 
-      constructor Create(FName   : FNameStr;   { Имя файла                  }
-                         BitpPix : byte;       { Бит на пикс. в одной плоск.}
-                         xl      : word;       { Левый край картинки        }
-                         yt      : word;       { Верхний край картинки      }
-                         xr      : word;       { Правый край картинки       }
-                         yb      : word;       { Нижний край картинки       }
-                         hres    : word;       { Гориз.разрешение дисплея   }
-                         vres    : word;       { Вертик.разрешение дисплея  }
-                         npanel  : byte;       { Кол-во плоскостей          }
-                         BytePLn : word;       { Байт на строку             }
-                         palinfo : word);      { Инф.о палитре (1=цв.,2=сер)}
+      constructor Create(FName   : FNameStr;   { ╨Ш╨╝╤П ╤Д╨░╨╣╨╗╨░                  }
+                         BitpPix : byte;       { ╨С╨╕╤В ╨╜╨░ ╨┐╨╕╨║╤Б. ╨▓ ╨╛╨┤╨╜╨╛╨╣ ╨┐╨╗╨╛╤Б╨║.}
+                         xl      : word;       { ╨Ы╨╡╨▓╤Л╨╣ ╨║╤А╨░╨╣ ╨║╨░╤А╤В╨╕╨╜╨║╨╕        }
+                         yt      : word;       { ╨Т╨╡╤А╤Е╨╜╨╕╨╣ ╨║╤А╨░╨╣ ╨║╨░╤А╤В╨╕╨╜╨║╨╕      }
+                         xr      : word;       { ╨Я╤А╨░╨▓╤Л╨╣ ╨║╤А╨░╨╣ ╨║╨░╤А╤В╨╕╨╜╨║╨╕       }
+                         yb      : word;       { ╨Э╨╕╨╢╨╜╨╕╨╣ ╨║╤А╨░╨╣ ╨║╨░╤А╤В╨╕╨╜╨║╨╕       }
+                         hres    : word;       { ╨У╨╛╤А╨╕╨╖.╤А╨░╨╖╤А╨╡╤И╨╡╨╜╨╕╨╡ ╨┤╨╕╤Б╨┐╨╗╨╡╤П   }
+                         vres    : word;       { ╨Т╨╡╤А╤В╨╕╨║.╤А╨░╨╖╤А╨╡╤И╨╡╨╜╨╕╨╡ ╨┤╨╕╤Б╨┐╨╗╨╡╤П  }
+                         npanel  : byte;       { ╨Ъ╨╛╨╗-╨▓╨╛ ╨┐╨╗╨╛╤Б╨║╨╛╤Б╤В╨╡╨╣          }
+                         BytePLn : word;       { ╨С╨░╨╣╤В ╨╜╨░ ╤Б╤В╤А╨╛╨║╤Г             }
+                         palinfo : word);      { ╨Ш╨╜╤Д.╨╛ ╨┐╨░╨╗╨╕╤В╤А╨╡ (1=╤Ж╨▓.,2=╤Б╨╡╤А)}
 
       procedure ReadLine( var BitMap); virtual;
 
@@ -482,7 +482,7 @@ uses Objects,
 
     end;
 
-{ Объект для работы с форматом  TIFF }
+{ ╨Ю╨▒╤К╨╡╨║╤В ╨┤╨╗╤П ╤А╨░╨▒╨╛╤В╤Л ╤Б ╤Д╨╛╤А╨╝╨░╤В╨╛╨╝  TIFF }
 
   PsTIFF = ^TsTIFF;
   TsTIFF =
@@ -492,11 +492,11 @@ uses Objects,
 
       constructor Open(FName : FNameStr);
 
-      constructor Create(FName     : FNameStr; { Имя файла                  }
-                         Order     : OrderType;{ Послед-ть байтов в слове   }
-                         ImgWidth  : word;     { Ширина  изображения        }
-                         ImgHeight : word;     { Высота  изображения        }
-                         PixelSize : byte);    { Кол-во бит на пиксел       }
+      constructor Create(FName     : FNameStr; { ╨Ш╨╝╤П ╤Д╨░╨╣╨╗╨░                  }
+                         Order     : OrderType;{ ╨Я╨╛╤Б╨╗╨╡╨┤-╤В╤М ╨▒╨░╨╣╤В╨╛╨▓ ╨▓ ╤Б╨╗╨╛╨▓╨╡   }
+                         ImgWidth  : word;     { ╨и╨╕╤А╨╕╨╜╨░  ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П        }
+                         ImgHeight : word;     { ╨Т╤Л╤Б╨╛╤В╨░  ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П        }
+                         PixelSize : byte);    { ╨Ъ╨╛╨╗-╨▓╨╛ ╨▒╨╕╤В ╨╜╨░ ╨┐╨╕╨║╤Б╨╡╨╗       }
 
       procedure ReadLine( var BitMap); virtual;
 
@@ -2986,17 +2986,17 @@ TDosStream.Init(FName,stOpen);
 END;
 
 { *********************************************************************** }
-constructor TsPCX.Create(FName   : FNameStr; { Имя файла                  }
-                         BitpPix : byte;     { Кол - во бит на пиксел     }
-                         xl      : word;     { Левый край картинки        }
-                         yt      : word;     { Верхний край картинки      }
-                         xr      : word;     { Правый край картинки       }
-                         yb      : word;     { Нижний край картинки       }
-                         hres    : word;     { Гориз.разрешение дисплея   }
-                         vres    : word;     { Вертик.разрешение дисплея  }
-                         npanel  : byte;     { Кол-во плоскостей          }
-                         BytePLn : word;     { Байт на строку             }
-                         palinfo : word);    { Инф.о палитре (1=цв.,2=сер)}
+constructor TsPCX.Create(FName   : FNameStr; { ╨Ш╨╝╤П ╤Д╨░╨╣╨╗╨░                  }
+                         BitpPix : byte;     { ╨Ъ╨╛╨╗ - ╨▓╨╛ ╨▒╨╕╤В ╨╜╨░ ╨┐╨╕╨║╤Б╨╡╨╗     }
+                         xl      : word;     { ╨Ы╨╡╨▓╤Л╨╣ ╨║╤А╨░╨╣ ╨║╨░╤А╤В╨╕╨╜╨║╨╕        }
+                         yt      : word;     { ╨Т╨╡╤А╤Е╨╜╨╕╨╣ ╨║╤А╨░╨╣ ╨║╨░╤А╤В╨╕╨╜╨║╨╕      }
+                         xr      : word;     { ╨Я╤А╨░╨▓╤Л╨╣ ╨║╤А╨░╨╣ ╨║╨░╤А╤В╨╕╨╜╨║╨╕       }
+                         yb      : word;     { ╨Э╨╕╨╢╨╜╨╕╨╣ ╨║╤А╨░╨╣ ╨║╨░╤А╤В╨╕╨╜╨║╨╕       }
+                         hres    : word;     { ╨У╨╛╤А╨╕╨╖.╤А╨░╨╖╤А╨╡╤И╨╡╨╜╨╕╨╡ ╨┤╨╕╤Б╨┐╨╗╨╡╤П   }
+                         vres    : word;     { ╨Т╨╡╤А╤В╨╕╨║.╤А╨░╨╖╤А╨╡╤И╨╡╨╜╨╕╨╡ ╨┤╨╕╤Б╨┐╨╗╨╡╤П  }
+                         npanel  : byte;     { ╨Ъ╨╛╨╗-╨▓╨╛ ╨┐╨╗╨╛╤Б╨║╨╛╤Б╤В╨╡╨╣          }
+                         BytePLn : word;     { ╨С╨░╨╣╤В ╨╜╨░ ╤Б╤В╤А╨╛╨║╤Г             }
+                         palinfo : word);    { ╨Ш╨╜╤Д.╨╛ ╨┐╨░╨╗╨╕╤В╤А╨╡ (1=╤Ж╨▓.,2=╤Б╨╡╤А)}
 
 var
   position  : longint;
@@ -3610,7 +3610,7 @@ if EverythingOk(E) then
 
         new(TagsDir);
         with TagsDir^ do
-          begin { Установить значения полей по умолчанию }
+          begin { ╨г╤Б╤В╨░╨╜╨╛╨▓╨╕╤В╤М ╨╖╨╜╨░╤З╨╡╨╜╨╕╤П ╨┐╨╛╨╗╨╡╨╣ ╨┐╨╛ ╤Г╨╝╨╛╨╗╤З╨░╨╜╨╕╤О }
             SubfileType:= Full;
             Width:= 0;
             Height:= 0;
@@ -3809,7 +3809,7 @@ if EverythingOk(E) then
         end;
 
         with TagsDir^ do
-          begin { Установить значения полей по умолчанию }
+          begin { ╨г╤Б╤В╨░╨╜╨╛╨▓╨╕╤В╤М ╨╖╨╜╨░╤З╨╡╨╜╨╕╤П ╨┐╨╛╨╗╨╡╨╣ ╨┐╨╛ ╤Г╨╝╨╛╨╗╤З╨░╨╜╨╕╤О }
             if (Width = 0) or (Height = 0) or
                (BitsPerSample = 0) or
                (StripOffsets = nil)
@@ -4220,7 +4220,7 @@ else
   end;
 END;
 
-   {--------------------- Основные процедуры ---------------------}
+   {--------------------- ╨Ю╤Б╨╜╨╛╨▓╨╜╤Л╨╡ ╨┐╤А╨╛╤Ж╨╡╨┤╤Г╤А╤Л ---------------------}
 
 { ********************************************************************** }
 constructor TsTIFF.Open(FName : FNameStr);

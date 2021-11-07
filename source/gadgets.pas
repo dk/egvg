@@ -66,7 +66,7 @@ implementation
 
 constructor THeapView.Init(var Bounds: TRect);
 begin
-  inherited Init(Bounds, cmUpdateHeapView, 9); { ~ ࠧ � ���ᥪ㭤� }
+  inherited Init(Bounds, cmUpdateHeapView, 9); { ~ раз в полсекунды }
   OldMem := 0;
 end;
 
@@ -187,7 +187,7 @@ end;
 {$IFDEF RUSSIAN}
 constructor TKeyboardView.Init(var Bounds: TRect);
 begin
-  inherited Init(Bounds, cmUpdateKbdView, 4); { ~ 4 ࠧ� � ᥪ㭤� }
+  inherited Init(Bounds, cmUpdateKbdView, 4); { ~ 4 раза в секунду }
   OldMode:= AltKbdMode;
 end;
 

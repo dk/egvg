@@ -56,8 +56,8 @@ Type
   Vectors        =   Array[0..MaxInt-1]  of Vector;
   PVector        =  ^Vectors;
 
-  {для некрученого вывода можно использовать TBGIPrimaryFont -
-  он побыстрее.}
+  {╨┤╨╗╤П ╨╜╨╡╨║╤А╤Г╤З╨╡╨╜╨╛╨│╨╛ ╨▓╤Л╨▓╨╛╨┤╨░ ╨╝╨╛╨╢╨╜╨╛ ╨╕╤Б╨┐╨╛╨╗╤М╨╖╨╛╨▓╨░╤В╤М TBGIPrimaryFont -
+  ╨╛╨╜ ╨┐╨╛╨▒╤Л╤Б╤В╤А╨╡╨╡.}
   TBGIPrimaryFont = object(TAbstractFont)
     Constructor Init(FontName : String);
     Constructor Register(Font : Pointer);
@@ -100,7 +100,7 @@ Type
   Float = Real;
 {$ENDIF}
 
-  {но подлинный кайф от векторных шрифтов дает всеж TBGIFont}
+  {╨╜╨╛ ╨┐╨╛╨┤╨╗╨╕╨╜╨╜╤Л╨╣ ╨║╨░╨╣╤Д ╨╛╤В ╨▓╨╡╨║╤В╨╛╤А╨╜╤Л╤Е ╤И╤А╨╕╤Д╤В╨╛╨▓ ╨┤╨░╨╡╤В ╨▓╤Б╨╡╨╢ TBGIFont}
   TBGIFont = object(TBGIPrimaryFont)
     Constructor Init(FontName : String);
     Procedure   SetParams(AFill : Boolean; AGap : Integer; MXX, MYY, A : Real; AItalic : Byte);

@@ -1560,7 +1560,7 @@ End;
 
 Procedure StretchDIBitmap(Image, Dest : PImage; xxx, yyy, xFrom, yFrom,
           xLen, yLen, xDest, yDest : integer; ColorRef : PColorRef; ClipRect : TRect);
-{·‚‡†Ë≠Æ ¨•§´•≠≠Î© ® £´Ó™†¢Î© - † ¢·• ‡†¢≠Æ ≠• ≠„¶•≠ ≠®™Æ¨„ :(}
+{—Å—Ç—Ä–∞—à–Ω–æ –º–µ–¥–ª–µ–Ω–Ω—ã–π –∏ –≥–ª—é–∫–∞–≤—ã–π - –∞ –≤—Å–µ —Ä–∞–≤–Ω–æ –Ω–µ –Ω—É–∂–µ–Ω –Ω–∏–∫–æ–º—É :(}
 Var
   Data, DestData : PByteArray;
   NX, NY, NBP, I, J, MaxX, MaxY, xaDest, yaDest, NX2, NY2, BPL2 : Word;
@@ -1972,7 +1972,7 @@ Begin
   asm mov di, offset CopyRight end;
   VideoSeg := SegA000;
   {$IFDEF DPMI}
-  {Ì‚Æ §´Ô ‚Æ£Æ Á‚Æ°Î Ø‡ÆØ®·Î¢†‚Ï ™Æ§ ≠• ¢ÎßÎ¢†Ô exception 13.}
+  {—ç—Ç–æ –¥–ª—è —Ç–æ–≥–æ —á—Ç–æ–±—ã –ø—Ä–æ–ø–∏—Å—ã–≤–∞—Ç—å –∫–æ–¥ –Ω–µ –≤—ã–∑—ã–≤–∞—è exception 13.}
   asm
     mov bx, cs
     mov ax, 0Ah

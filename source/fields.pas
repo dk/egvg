@@ -1,26 +1,26 @@
 {
-  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-  █ Unit        :  FIELDS                                              █
-  █                                                                    █
-  █ Description :  Some useful miscellaneous objects and routines      █
-  █                                                                    █
-  █ Author      :  Tony Berezin, Yuri Shimon, Oleg Oleinick            █
-  █════════════════════════════════════════════════════════════════════█
-  █                       Edit Fields                                  █
-  █ TAbsEditField  - abstract type, don't use it !                     █
-  █ TPatternEdit                                                       █
-  █ TDateValidator                                                     █
-  █ TDateInput                                                         █
-  █ TNumericInput                                                      █
-  █ TMoneyValidator                                                    █
-  █ TMoneyInput                                                        █
-  █                                                                    █
-  █ TViewListBox                                                       █
-  █ TEditListBox                                                       █
-  █ TWordValidator                                                     █
-  █ TLongValidator                                                     █
-  █ TByteValidator                                                     █
-  █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+  тЦИтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦИ
+  тЦИ Unit        :  FIELDS                                              тЦИ
+  тЦИ                                                                    тЦИ
+  тЦИ Description :  Some useful miscellaneous objects and routines      тЦИ
+  тЦИ                                                                    тЦИ
+  тЦИ Author      :  Tony Berezin, Yuri Shimon, Oleg Oleinick            тЦИ
+  тЦИтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтХРтЦИ
+  тЦИ                       Edit Fields                                  тЦИ
+  тЦИ TAbsEditField  - abstract type, don't use it !                     тЦИ
+  тЦИ TPatternEdit                                                       тЦИ
+  тЦИ TDateValidator                                                     тЦИ
+  тЦИ TDateInput                                                         тЦИ
+  тЦИ TNumericInput                                                      тЦИ
+  тЦИ TMoneyValidator                                                    тЦИ
+  тЦИ TMoneyInput                                                        тЦИ
+  тЦИ                                                                    тЦИ
+  тЦИ TViewListBox                                                       тЦИ
+  тЦИ TEditListBox                                                       тЦИ
+  тЦИ TWordValidator                                                     тЦИ
+  тЦИ TLongValidator                                                     тЦИ
+  тЦИ TByteValidator                                                     тЦИ
+  тЦИтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦИ
 }
 
 
@@ -109,7 +109,7 @@ Const
   Scientific   =    'E';  { Same as Digits, plus 'e' }
   HexOnly      =    'K';  { 0..9, A..F, force upper }
   BoolOnly     =    'B';  { t, T, f, F }
-  YesNoOnly    =    'Y';  { y, Y, n, N, д, Д, н, Н }
+  YesNoOnly    =    'Y';  { y, Y, n, N, ╨┤, ╨Ф, ╨╜, ╨Э }
 
 Const
   PatternsSet = [AnyChar, ForceUp, ForceLo, ForceMix,
@@ -139,29 +139,29 @@ Type
 
 
 {
-  Общая схема работы с полем ввода по образцу:
-    - пробел всегда возможен;
-    - если в поле не хватает символов, оно дополняется пробелами;
-    - поле делится на подполя двух видов - "подполя переходов" и
-      "подполя набора";  подполя набора выделяются по последовательностям
-      одинаковых значимых (упомянутых в PatternsSet) символов в образце;
-      подполя перехода выделяются по незначимым (не упомянутым в PatternsSet)
-      символам в образце;  пример разбиения на подполя:
-      "XXXX99.99XXXX";  здесь 2 подполя переходов - "XXXX99" и "99XXXX"
-      и четыре подполя набора - "XXXX", "99", "99" и "XXXX";
-    - текущая позиция в поле никогда не может совпадать с позицией
-      символа в образце, не включенного в PatternsSet;
-    - переход между подполями переходов по достижению в процессе
-      перемещения по подполю перехода края подполя перехода, по Ctrl-Left,
+  ╨Ю╨▒╤Й╨░╤П ╤Б╤Е╨╡╨╝╨░ ╤А╨░╨▒╨╛╤В╤Л ╤Б ╨┐╨╛╨╗╨╡╨╝ ╨▓╨▓╨╛╨┤╨░ ╨┐╨╛ ╨╛╨▒╤А╨░╨╖╤Ж╤Г:
+    - ╨┐╤А╨╛╨▒╨╡╨╗ ╨▓╤Б╨╡╨│╨┤╨░ ╨▓╨╛╨╖╨╝╨╛╨╢╨╡╨╜;
+    - ╨╡╤Б╨╗╨╕ ╨▓ ╨┐╨╛╨╗╨╡ ╨╜╨╡ ╤Е╨▓╨░╤В╨░╨╡╤В ╤Б╨╕╨╝╨▓╨╛╨╗╨╛╨▓, ╨╛╨╜╨╛ ╨┤╨╛╨┐╨╛╨╗╨╜╤П╨╡╤В╤Б╤П ╨┐╤А╨╛╨▒╨╡╨╗╨░╨╝╨╕;
+    - ╨┐╨╛╨╗╨╡ ╨┤╨╡╨╗╨╕╤В╤Б╤П ╨╜╨░ ╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨┤╨▓╤Г╤Е ╨▓╨╕╨┤╨╛╨▓ - "╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨┐╨╡╤А╨╡╤Е╨╛╨┤╨╛╨▓" ╨╕
+      "╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨╜╨░╨▒╨╛╤А╨░";  ╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨╜╨░╨▒╨╛╤А╨░ ╨▓╤Л╨┤╨╡╨╗╤П╤О╤В╤Б╤П ╨┐╨╛ ╨┐╨╛╤Б╨╗╨╡╨┤╨╛╨▓╨░╤В╨╡╨╗╤М╨╜╨╛╤Б╤В╤П╨╝
+      ╨╛╨┤╨╕╨╜╨░╨║╨╛╨▓╤Л╤Е ╨╖╨╜╨░╤З╨╕╨╝╤Л╤Е (╤Г╨┐╨╛╨╝╤П╨╜╤Г╤В╤Л╤Е ╨▓ PatternsSet) ╤Б╨╕╨╝╨▓╨╛╨╗╨╛╨▓ ╨▓ ╨╛╨▒╤А╨░╨╖╤Ж╨╡;
+      ╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨┐╨╡╤А╨╡╤Е╨╛╨┤╨░ ╨▓╤Л╨┤╨╡╨╗╤П╤О╤В╤Б╤П ╨┐╨╛ ╨╜╨╡╨╖╨╜╨░╤З╨╕╨╝╤Л╨╝ (╨╜╨╡ ╤Г╨┐╨╛╨╝╤П╨╜╤Г╤В╤Л╨╝ ╨▓ PatternsSet)
+      ╤Б╨╕╨╝╨▓╨╛╨╗╨░╨╝ ╨▓ ╨╛╨▒╤А╨░╨╖╤Ж╨╡;  ╨┐╤А╨╕╨╝╨╡╤А ╤А╨░╨╖╨▒╨╕╨╡╨╜╨╕╤П ╨╜╨░ ╨┐╨╛╨┤╨┐╨╛╨╗╤П:
+      "XXXX99.99XXXX";  ╨╖╨┤╨╡╤Б╤М 2 ╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨┐╨╡╤А╨╡╤Е╨╛╨┤╨╛╨▓ - "XXXX99" ╨╕ "99XXXX"
+      ╨╕ ╤З╨╡╤В╤Л╤А╨╡ ╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨╜╨░╨▒╨╛╤А╨░ - "XXXX", "99", "99" ╨╕ "XXXX";
+    - ╤В╨╡╨║╤Г╤Й╨░╤П ╨┐╨╛╨╖╨╕╤Ж╨╕╤П ╨▓ ╨┐╨╛╨╗╨╡ ╨╜╨╕╨║╨╛╨│╨┤╨░ ╨╜╨╡ ╨╝╨╛╨╢╨╡╤В ╤Б╨╛╨▓╨┐╨░╨┤╨░╤В╤М ╤Б ╨┐╨╛╨╖╨╕╤Ж╨╕╨╡╨╣
+      ╤Б╨╕╨╝╨▓╨╛╨╗╨░ ╨▓ ╨╛╨▒╤А╨░╨╖╤Ж╨╡, ╨╜╨╡ ╨▓╨║╨╗╤О╤З╨╡╨╜╨╜╨╛╨│╨╛ ╨▓ PatternsSet;
+    - ╨┐╨╡╤А╨╡╤Е╨╛╨┤ ╨╝╨╡╨╢╨┤╤Г ╨┐╨╛╨┤╨┐╨╛╨╗╤П╨╝╨╕ ╨┐╨╡╤А╨╡╤Е╨╛╨┤╨╛╨▓ ╨┐╨╛ ╨┤╨╛╤Б╤В╨╕╨╢╨╡╨╜╨╕╤О ╨▓ ╨┐╤А╨╛╤Ж╨╡╤Б╤Б╨╡
+      ╨┐╨╡╤А╨╡╨╝╨╡╤Й╨╡╨╜╨╕╤П ╨┐╨╛ ╨┐╨╛╨┤╨┐╨╛╨╗╤О ╨┐╨╡╤А╨╡╤Е╨╛╨┤╨░ ╨║╤А╨░╤П ╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨┐╨╡╤А╨╡╤Е╨╛╨┤╨░, ╨┐╨╛ Ctrl-Left,
       Ctrl-Right;
-    - режим замены как обычно, только с перескоком через символы в
-      образце, не включенные в PatternsSet;
-    - режим вставки действует в пределах подполя набора, сдвигающиеся за
-      правую границу подполя набора символы теряются;
-    - удаление по BackSpace и по Del действует в пределах подполя набора,
-      недостающие символы справа в подполе набора дополняются пробелами;
-    - данные, передаваемые по SetData, должны соответствовать образцу,
-      если соответствия нет, подполя инициализируются пробелами;
+    - ╤А╨╡╨╢╨╕╨╝ ╨╖╨░╨╝╨╡╨╜╤Л ╨║╨░╨║ ╨╛╨▒╤Л╤З╨╜╨╛, ╤В╨╛╨╗╤М╨║╨╛ ╤Б ╨┐╨╡╤А╨╡╤Б╨║╨╛╨║╨╛╨╝ ╤З╨╡╤А╨╡╨╖ ╤Б╨╕╨╝╨▓╨╛╨╗╤Л ╨▓
+      ╨╛╨▒╤А╨░╨╖╤Ж╨╡, ╨╜╨╡ ╨▓╨║╨╗╤О╤З╨╡╨╜╨╜╤Л╨╡ ╨▓ PatternsSet;
+    - ╤А╨╡╨╢╨╕╨╝ ╨▓╤Б╤В╨░╨▓╨║╨╕ ╨┤╨╡╨╣╤Б╤В╨▓╤Г╨╡╤В ╨▓ ╨┐╤А╨╡╨┤╨╡╨╗╨░╤Е ╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨╜╨░╨▒╨╛╤А╨░, ╤Б╨┤╨▓╨╕╨│╨░╤О╤Й╨╕╨╡╤Б╤П ╨╖╨░
+      ╨┐╤А╨░╨▓╤Г╤О ╨│╤А╨░╨╜╨╕╤Ж╤Г ╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨╜╨░╨▒╨╛╤А╨░ ╤Б╨╕╨╝╨▓╨╛╨╗╤Л ╤В╨╡╤А╤П╤О╤В╤Б╤П;
+    - ╤Г╨┤╨░╨╗╨╡╨╜╨╕╨╡ ╨┐╨╛ BackSpace ╨╕ ╨┐╨╛ Del ╨┤╨╡╨╣╤Б╤В╨▓╤Г╨╡╤В ╨▓ ╨┐╤А╨╡╨┤╨╡╨╗╨░╤Е ╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨╜╨░╨▒╨╛╤А╨░,
+      ╨╜╨╡╨┤╨╛╤Б╤В╨░╤О╤Й╨╕╨╡ ╤Б╨╕╨╝╨▓╨╛╨╗╤Л ╤Б╨┐╤А╨░╨▓╨░ ╨▓ ╨┐╨╛╨┤╨┐╨╛╨╗╨╡ ╨╜╨░╨▒╨╛╤А╨░ ╨┤╨╛╨┐╨╛╨╗╨╜╤П╤О╤В╤Б╤П ╨┐╤А╨╛╨▒╨╡╨╗╨░╨╝╨╕;
+    - ╨┤╨░╨╜╨╜╤Л╨╡, ╨┐╨╡╤А╨╡╨┤╨░╨▓╨░╨╡╨╝╤Л╨╡ ╨┐╨╛ SetData, ╨┤╨╛╨╗╨╢╨╜╤Л ╤Б╨╛╨╛╤В╨▓╨╡╤В╤Б╤В╨▓╨╛╨▓╨░╤В╤М ╨╛╨▒╤А╨░╨╖╤Ж╤Г,
+      ╨╡╤Б╨╗╨╕ ╤Б╨╛╨╛╤В╨▓╨╡╤В╤Б╤В╨▓╨╕╤П ╨╜╨╡╤В, ╨┐╨╛╨┤╨┐╨╛╨╗╤П ╨╕╨╜╨╕╤Ж╨╕╨░╨╗╨╕╨╖╨╕╤А╤Г╤О╤В╤Б╤П ╨┐╤А╨╛╨▒╨╡╨╗╨░╨╝╨╕;
 }
 
 
@@ -181,7 +181,7 @@ Type
   end;
 
 Type
-  PDateInput = ^TDateInput;   { Автоматически подсобачивается валидатор }
+  PDateInput = ^TDateInput;   { ╨Р╨▓╤В╨╛╨╝╨░╤В╨╕╤З╨╡╤Б╨║╨╕ ╨┐╨╛╨┤╤Б╨╛╨▒╨░╤З╨╕╨▓╨░╨╡╤В╤Б╤П ╨▓╨░╨╗╨╕╨┤╨░╤В╨╛╤А }
   TDateInput = object(TPatternEdit)
     constructor Init(var Bounds: TRect; InsOvrMode: TInsOvrMode; ComputeBounds: boolean);
   end;
@@ -215,7 +215,7 @@ Type
   end;
 
 Type
-  PMoneyInput = ^TMoneyInput;   { Автоматически подсобачивается валидатор }
+  PMoneyInput = ^TMoneyInput;   { ╨Р╨▓╤В╨╛╨╝╨░╤В╨╕╤З╨╡╤Б╨║╨╕ ╨┐╨╛╨┤╤Б╨╛╨▒╨░╤З╨╕╨▓╨░╨╡╤В╤Б╤П ╨▓╨░╨╗╨╕╨┤╨░╤В╨╛╤А }
   TMoneyInput = object(TNumericInput)
     constructor Init(var Bounds: TRect; ComputeBounds: boolean);
   end;
@@ -539,7 +539,7 @@ procedure TPatternEdit.SetData(var Rec);
 var
   i: word;
 begin
-  inherited SetData(Rec);  { Вначале валидатором }
+  inherited SetData(Rec);  { ╨Т╨╜╨░╤З╨░╨╗╨╡ ╨▓╨░╨╗╨╕╨┤╨░╤В╨╛╤А╨╛╨╝ }
 
 {  if Length(Data^)<>MaxLen then EmptyFill else}
   if Length(Data^)<>MaxLen then Data^ := Copy(Pad(Data^, MaxLen), 1, MaxLen);
@@ -549,7 +549,7 @@ begin
   end;
 end;
 
-{ Функция несколько выпадает из канвы TurboVision'а }
+{ ╨д╤Г╨╜╨║╤Ж╨╕╤П ╨╜╨╡╤Б╨║╨╛╨╗╤М╨║╨╛ ╨▓╤Л╨┐╨░╨┤╨░╨╡╤В ╨╕╨╖ ╨║╨░╨╜╨▓╤Л TurboVision'╨░ }
 function TPatternEdit.ValidChar(Pos: word; var Ch: char): boolean;
 var
   c: char;
@@ -690,11 +690,11 @@ begin
   Pattern := NewStr(APattern);
   FillChar := ' ';
 
-  { Проверка на корректность шаблона }
+  { ╨Я╤А╨╛╨▓╨╡╤А╨║╨░ ╨╜╨░ ╨║╨╛╤А╤А╨╡╨║╤В╨╜╨╛╤Б╤В╤М ╤И╨░╨▒╨╗╨╛╨╜╨░ }
   b := 1;
   while (b<=MaxLen) and (not (APattern[b] in PatternsSet)) do Inc(b);
   if b>MaxLen then begin
-    Size.X := 0; Size.Y := 0;  { Вместо Fail, обсудить с Олегом }
+    Size.X := 0; Size.Y := 0;  { ╨Т╨╝╨╡╤Б╤В╨╛ Fail, ╨╛╨▒╤Б╤Г╨┤╨╕╤В╤М ╤Б ╨Ю╨╗╨╡╨│╨╛╨╝ }
   end else begin
     EmptyFill;
   end;
@@ -734,7 +734,7 @@ begin
     i := CurPos;
     while (i>=1) and (not (Pattern^[i] in PatternsSet)) do Dec(i);
   end;
-  { i не может быть равным нулю благодаря проверке в Init }
+  { i ╨╜╨╡ ╨╝╨╛╨╢╨╡╤В ╨▒╤Л╤В╤М ╤А╨░╨▓╨╜╤Л╨╝ ╨╜╤Г╨╗╤О ╨▒╨╗╨░╨│╨╛╨┤╨░╤А╤П ╨┐╤А╨╛╨▓╨╡╤А╨║╨╡ ╨▓ Init }
   CurPos := i;
   CheckCurPos := i;
 end;
@@ -757,7 +757,7 @@ procedure TPatternEdit.HandleEvent(var Event: TEvent);
   begin
     i := CheckCurPos;
     while (i>=1) and (Pattern^[i] in PatternsSet) do Dec(i);
-    l := Succ(i);  { На случай вызова SubJumpBounds(CurPos, ...) }
+    l := Succ(i);  { ╨Э╨░ ╤Б╨╗╤Г╤З╨░╨╣ ╨▓╤Л╨╖╨╛╨▓╨░ SubJumpBounds(CurPos, ...) }
     i := CurPos;
     while (i<=MaxLen) and (Pattern^[i] in PatternsSet) do Inc(i);
     Right := i - 1;
@@ -771,7 +771,7 @@ procedure TPatternEdit.HandleEvent(var Event: TEvent);
   begin
     i := CheckCurPos; c := Pattern^[i];
     while (i>=1) and (Pattern^[i] = c) do Dec(i);
-    l := Succ(i);  { На случай вызова SubTypeWriteBounds(CurPos, ...) }
+    l := Succ(i);  { ╨Э╨░ ╤Б╨╗╤Г╤З╨░╨╣ ╨▓╤Л╨╖╨╛╨▓╨░ SubTypeWriteBounds(CurPos, ...) }
     i := CurPos;
     while (i<=MaxLen) and (Pattern^[i] = c) do Inc(i);
     Right := i - 1;
@@ -783,12 +783,12 @@ procedure TPatternEdit.HandleEvent(var Event: TEvent);
     i, l, r: word;
   begin
     NextSubJump := False;
-    SubJumpBounds(l, r);  { Для текущего поля }
+    SubJumpBounds(l, r);  { ╨Ф╨╗╤П ╤В╨╡╨║╤Г╤Й╨╡╨│╨╛ ╨┐╨╛╨╗╤П }
     i := Succ(r);
     while (i<=MaxLen) and (not (Pattern^[i] in PatternsSet)) do Inc(i);
     if i>MaxLen then Exit;
     CurPos := i;
-    SubJumpBounds(Left, Right);  { Для следующего поля }
+    SubJumpBounds(Left, Right);  { ╨Ф╨╗╤П ╤Б╨╗╨╡╨┤╤Г╤О╤Й╨╡╨│╨╛ ╨┐╨╛╨╗╤П }
     NextSubJump := True;
   end;
 
@@ -797,12 +797,12 @@ procedure TPatternEdit.HandleEvent(var Event: TEvent);
     i, l, r: word;
   begin
     PrevSubJump := False;
-    SubJumpBounds(l, r);  { Для текущего поля }
+    SubJumpBounds(l, r);  { ╨Ф╨╗╤П ╤В╨╡╨║╤Г╤Й╨╡╨│╨╛ ╨┐╨╛╨╗╤П }
     i := l - 1;
     while (i>=1) and (not (Pattern^[i] in PatternsSet)) do Dec(i);
     if i=0 then Exit;
     CurPos := i;
-    SubJumpBounds(Left, Right);  { Для предыдущего поля }
+    SubJumpBounds(Left, Right);  { ╨Ф╨╗╤П ╨┐╤А╨╡╨┤╤Л╨┤╤Г╤Й╨╡╨│╨╛ ╨┐╨╛╨╗╤П }
     PrevSubJump := True;
   end;
 
@@ -811,12 +811,12 @@ procedure TPatternEdit.HandleEvent(var Event: TEvent);
     i, l, r: word;
   begin
     NextSubTypeWrite := False;
-    SubTypeWriteBounds(l, r);  { Для текущего поля }
+    SubTypeWriteBounds(l, r);  { ╨Ф╨╗╤П ╤В╨╡╨║╤Г╤Й╨╡╨│╨╛ ╨┐╨╛╨╗╤П }
     i := Succ(r);
     while (i<=MaxLen) and (not (Pattern^[i] in PatternsSet)) do Inc(i);
     if i>MaxLen then Exit;
     CurPos := i;
-    SubTypeWriteBounds(Left, Right);  { Для следующего поля }
+    SubTypeWriteBounds(Left, Right);  { ╨Ф╨╗╤П ╤Б╨╗╨╡╨┤╤Г╤О╤Й╨╡╨│╨╛ ╨┐╨╛╨╗╤П }
     NextSubTypeWrite := True;
   end;
 
@@ -825,12 +825,12 @@ procedure TPatternEdit.HandleEvent(var Event: TEvent);
     i, l, r: word;
   begin
     PrevSubTypeWrite := False;
-    SubTypeWriteBounds(l, r);  { Для текущего поля }
+    SubTypeWriteBounds(l, r);  { ╨Ф╨╗╤П ╤В╨╡╨║╤Г╤Й╨╡╨│╨╛ ╨┐╨╛╨╗╤П }
     i := l - 1;
     while (i>=1) and (not (Pattern^[i] in PatternsSet)) do Dec(i);
     if i=0 then Exit;
     CurPos := i;
-    SubTypeWriteBounds(Left, Right);  { Для предыдущего поля }
+    SubTypeWriteBounds(Left, Right);  { ╨Ф╨╗╤П ╨┐╤А╨╡╨┤╤Л╨┤╤Г╤Й╨╡╨│╨╛ ╨┐╨╛╨╗╤П }
     PrevSubTypeWrite := True;
   end;
 
@@ -844,7 +844,7 @@ procedure TPatternEdit.HandleEvent(var Event: TEvent);
 
 procedure SetCurPos;
 begin
-  DrawView; { Потом сделать умнее }
+  DrawView; { ╨Я╨╛╤В╨╛╨╝ ╤Б╨┤╨╡╨╗╨░╤В╤М ╤Г╨╝╨╜╨╡╨╡ }
   {SetCursor(Pred(CurPos) * CharWidth, 0);}
 end;
 
@@ -1284,7 +1284,7 @@ begin
     end;
 end;
 
-{───────────────────────────────────────────────────────────────────────────}
+{тФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФАтФА}
 
 function TWordValidator.Transfer(var S: String; Buffer: Pointer; Flag: TVTransfer): Word;
 var

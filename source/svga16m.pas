@@ -3,14 +3,14 @@
 {$C FIXED PRELOAD PERMANENT}
 {$ENDIF}
 {
-  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-  █ Unit        : SVGA Graphics Library                                █
-  █ Description : Virtual Graphics SuperVGA 16M-colors driver          █
-  █ Author      : Dmitry Karasik                                       █
-  █ Version     : X01.00 (internal)                                    █
-  █ Release     : 01.00                                                █
-  █ Last update : 26-AUG-1996                                          █
-  █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+  тЦИтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦАтЦИ
+  тЦИ Unit        : SVGA Graphics Library                                тЦИ
+  тЦИ Description : Virtual Graphics SuperVGA 16M-colors driver          тЦИ
+  тЦИ Author      : Dmitry Karasik                                       тЦИ
+  тЦИ Version     : X01.00 (internal)                                    тЦИ
+  тЦИ Release     : 01.00                                                тЦИ
+  тЦИ Last update : 26-AUG-1996                                          тЦИ
+  тЦИтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦДтЦИ
 
 }
 {$DEFINE BEWARENOTSVGA}
@@ -579,8 +579,8 @@ Asm
 End;
 
 
-{эти 2 процс - намордник для моуса, который вызывается извне
-и может вызваться во время рисования и все погадить}
+{╤Н╤В╨╕ 2 ╨┐╤А╨╛╤Ж╤Б - ╨╜╨░╨╝╨╛╤А╨┤╨╜╨╕╨║ ╨┤╨╗╤П ╨╝╨╛╤Г╤Б╨░, ╨║╨╛╤В╨╛╤А╤Л╨╣ ╨▓╤Л╨╖╤Л╨▓╨░╨╡╤В╤Б╤П ╨╕╨╖╨▓╨╜╨╡
+╨╕ ╨╝╨╛╨╢╨╡╤В ╨▓╤Л╨╖╨▓╨░╤В╤М╤Б╤П ╨▓╨╛ ╨▓╤А╨╡╨╝╤П ╤А╨╕╤Б╨╛╨▓╨░╨╜╨╕╤П ╨╕ ╨▓╤Б╨╡ ╨┐╨╛╨│╨░╨┤╨╕╤В╤М}
 Procedure SaveSVGAState; Near; Assembler;
 Asm
   mov ax, ds
@@ -611,7 +611,7 @@ Asm
   call SelectBank
 End;
 
-{Quick Save/Restore тянут максимум квадрат 32x32}
+{Quick Save/Restore ╤В╤П╨╜╤Г╤В ╨╝╨░╨║╤Б╨╕╨╝╤Г╨╝ ╨║╨▓╨░╨┤╤А╨░╤В 32x32}
 procedure QuickRestore(xxx, yyy, xLen, yLen: integer); Assembler;
 Var
   Y, I : Word;
@@ -762,7 +762,7 @@ Asm
   sti
 End;
 
-{специфичен для стандарного вида курсоров как mono and/xor масок}
+{╤Б╨┐╨╡╤Ж╨╕╤Д╨╕╤З╨╡╨╜ ╨┤╨╗╤П ╤Б╤В╨░╨╜╨┤╨░╤А╨╜╨╛╨│╨╛ ╨▓╨╕╨┤╨░ ╨║╤Г╤А╤Б╨╛╤А╨╛╨▓ ╨║╨░╨║ mono and/xor ╨╝╨░╤Б╨╛╨║}
 procedure DirectMousePut(var Buf; x, y, xFrom, yFrom, Width, Height: integer);
 Var
   I, J, K : Word;
@@ -972,7 +972,7 @@ Begin
   end;
 End;
 
-{центровая процедура отрисовки фигур}
+{╤Ж╨╡╨╜╤В╤А╨╛╨▓╨░╤П ╨┐╤А╨╛╤Ж╨╡╨┤╤Г╤А╨░ ╨╛╤В╤А╨╕╤Б╨╛╨▓╨║╨╕ ╤Д╨╕╨│╤Г╤А}
 procedure HLineStyleOp;
 Label
   __Code, __Code1, __Code2, __BMPCode, __BMPCode1, __BMPCode2, __MetaCode1, __MetaCode2;
@@ -1688,9 +1688,9 @@ Begin
   end;
 End;
 
-{в отличие от BGI и GDI здесь разумно разнесены функции нормального
-и операционного вывода бмпов}
-{выводит битмапы с переводом по ColorRef}
+{╨▓ ╨╛╤В╨╗╨╕╤З╨╕╨╡ ╨╛╤В BGI ╨╕ GDI ╨╖╨┤╨╡╤Б╤М ╤А╨░╨╖╤Г╨╝╨╜╨╛ ╤А╨░╨╖╨╜╨╡╤Б╨╡╨╜╤Л ╤Д╤Г╨╜╨║╤Ж╨╕╨╕ ╨╜╨╛╤А╨╝╨░╨╗╤М╨╜╨╛╨│╨╛
+╨╕ ╨╛╨┐╨╡╤А╨░╤Ж╨╕╨╛╨╜╨╜╨╛╨│╨╛ ╨▓╤Л╨▓╨╛╨┤╨░ ╨▒╨╝╨┐╨╛╨▓}
+{╨▓╤Л╨▓╨╛╨┤╨╕╤В ╨▒╨╕╤В╨╝╨░╨┐╤Л ╤Б ╨┐╨╡╤А╨╡╨▓╨╛╨┤╨╛╨╝ ╨┐╨╛ ColorRef}
 Procedure PutBMPPartOp(Image: PImage; xxx, yyy, xFrom, yFrom, xLen, yLen: integer;
                        Operation: Byte; ColorRef : PColorRef);
 Label
@@ -1845,7 +1845,7 @@ Begin
 
   imIcon, imCursor, imPlaned, imPlaned16 : begin
       if IsImageStreamed(Image) then Exit;
-      {рудиментарная отработка 4-х плановых изображений}
+      {╤А╤Г╨┤╨╕╨╝╨╡╨╜╤В╨░╤А╨╜╨░╤П ╨╛╤В╤А╨░╨▒╨╛╤В╨║╨░ 4-╤Е ╨┐╨╗╨░╨╜╨╛╨▓╤Л╤Е ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╣}
       __Before(Operation); asm mov ax, offset cs:_PlanedCode end; __After;
       NBP := yFrom * BPLin;
       for I := 0 to 3 do PlanesPreCalc[I] := (NY * BPLin) * I;
@@ -1923,7 +1923,7 @@ Begin
     end;
     imIcon, imCursor, imPlaned, imPlaned16:begin
       {if IsImageStreamed(Image) then Exit;}
-      {рудиментарная отработка 4-х плановых изображений}
+      {╤А╤Г╨┤╨╕╨╝╨╡╨╜╤В╨░╤А╨╜╨░╤П ╨╛╤В╤А╨░╨▒╨╛╤В╨║╨░ 4-╤Е ╨┐╨╗╨░╨╜╨╛╨▓╤Л╤Е ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╣}
       PrepareExpandPlaned(NX, False);
       for I := 0 to MaxY - 1 do begin
         Data := MapBitLineRead(Image, yFrom + I, BPLin);
@@ -2078,9 +2078,9 @@ Begin
           end;
       end;
     end else begin
-    {не проверено для карточек с банками по 8К и ниже - как у AT wonder/Paradise
-    /старых Cirrusов
-    предполагается что меньше чем по 4К карточек не существует.}
+    {╨╜╨╡ ╨┐╤А╨╛╨▓╨╡╤А╨╡╨╜╨╛ ╨┤╨╗╤П ╨║╨░╤А╤В╨╛╤З╨╡╨║ ╤Б ╨▒╨░╨╜╨║╨░╨╝╨╕ ╨┐╨╛ 8╨Ъ ╨╕ ╨╜╨╕╨╢╨╡ - ╨║╨░╨║ ╤Г AT wonder/Paradise
+    /╤Б╤В╨░╤А╤Л╤Е Cirrus╨╛╨▓
+    ╨┐╤А╨╡╨┤╨┐╨╛╨╗╨░╨│╨░╨╡╤В╤Б╤П ╤З╤В╨╛ ╨╝╨╡╨╜╤М╤И╨╡ ╤З╨╡╨╝ ╨┐╨╛ 4╨Ъ ╨║╨░╤А╤В╨╛╤З╨╡╨║ ╨╜╨╡ ╤Б╤Г╤Й╨╡╤Б╤В╨▓╤Г╨╡╤В.}
       J := BufGranula div Granularity;
       X := X2 - X1 + 1;
       for Y := Y1 to Y2 do begin
@@ -2498,7 +2498,7 @@ End;
 begin
   asm mov di, offset CopyRight end;
   {$IFDEF DPMI}
-  {это для того чтобы прописывать код не вызывая exception 13.}
+  {╤Н╤В╨╛ ╨┤╨╗╤П ╤В╨╛╨│╨╛ ╤З╤В╨╛╨▒╤Л ╨┐╤А╨╛╨┐╨╕╤Б╤Л╨▓╨░╤В╤М ╨║╨╛╨┤ ╨╜╨╡ ╨▓╤Л╨╖╤Л╨▓╨░╤П exception 13.}
   asm
     mov bx, cs
     mov ax, 0Ah

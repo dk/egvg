@@ -1,13 +1,13 @@
 {$G+,S-,F+}
 {
-  €ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ€
-  € Unit        : VGA palettes handling                                €
-  € Description : Virtual Graphics 256-color virtual palettes kernel   €
-  € Author      : Dmitry Karasik                                       €
-  € Version     : X01.00 (internal)                                    €
-  € Release     : 01.00                                                €
-  € Last update : 20-JAN-1996                                          €
-  €‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹€
+  ‚ñà‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñÄ‚ñà
+  ‚ñà Unit        : VGA palettes handling                                ‚ñà
+  ‚ñà Description : Virtual Graphics 256-color virtual palettes kernel   ‚ñà
+  ‚ñà Author      : Dmitry Karasik                                       ‚ñà
+  ‚ñà Version     : X01.00 (internal)                                    ‚ñà
+  ‚ñà Release     : 01.00                                                ‚ñà
+  ‚ñà Last update : 20-JAN-1996                                          ‚ñà
+  ‚ñà‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñÑ‚ñà
 
 }
 unit Palettes;
@@ -51,8 +51,8 @@ Const
   StdLogPalette : TLogPalette = (
     Mode     : 0;
     Colors   : 256;
-    Palette  : @StdVGAPalette; {ß§•·Ï 768 °†©‚ ·‚†≠§†‡‚ ¢£† Ø†´®‚‡†}
-    ColorRef : @StdColorRefMap {ß§•·Ï 256 °†©‚ 0-255}
+    Palette  : @StdVGAPalette; {–∑–¥–µ—Å—å 768 –±–∞–π—Ç —Å—Ç–∞–Ω–¥–∞—Ä—Ç –≤–≥–∞ –ø–∞–ª–∏—Ç—Ä–∞}
+    ColorRef : @StdColorRefMap {–∑–¥–µ—Å—å 256 –±–∞–π—Ç 0-255}
   );
 
 Var
@@ -164,7 +164,7 @@ Begin
   PalBufferSize := PalBufferSize;
   if PalBufferSize > SystemColors then begin
     PalBuffer := MemAlloc(PalBufferSize * 3);
-    if PalBuffer = nil then Exit; {‚.•. •·´® ≠• °„§•‚ Ø†¨Ô‚®, ‚Æ ≠• °„§•‚ Æ‚‡®·Æ¢Æ™!}
+    if PalBuffer = nil then Exit; {—Ç.–µ. –µ—Å–ª–∏ –Ω–µ –±—É–¥–µ—Ç –ø–∞–º—è—Ç–∏, —Ç–æ –Ω–µ –±—É–¥–µ—Ç –æ—Ç—Ä–∏—Å–æ–≤–æ–∫!}
     ColorCnt  := SystemColors;
     Move(PMainPalette^, PalBuffer^, SystemColors * 3);
     PaletteUsers.ForEach(@_RegisterPalette);

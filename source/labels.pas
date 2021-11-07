@@ -261,10 +261,10 @@ Type PReal = ^Real;
  end;
 
 
-    {ÛßßßßßßßßßßßßßßßßßÛÄ¿
-     Û TBitMapButton...Û ³
-     ÛÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÛ ³
-      ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ}
+    {â–ˆâ–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–ˆâ”€â”
+     â–ˆ TBitMapButton...â–ˆ â”‚
+     â–ˆâ–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–ˆ â”‚
+      â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜}
 constructor TBitMapButton.Init;
 begin Inherited Init(Bounds, ATitle, ACommand, AFlags);
   BitMap:= New(PBitMap, Init(ID));

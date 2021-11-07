@@ -307,7 +307,7 @@ procedure FormatStr(var Result: String; const Format: String; var Params);
 procedure PrintStr(const S: String);
 function InputStr(Hide: Boolean): String; {OOA}
 procedure ReStr(var P: PString; const S: String); {TONY}
-  {--- ë≠†Á†´† DisposeStr(P) ß†‚•¨ P:= NewStr(S) }
+  {--- –°–Ω–∞—á–∞–ª–∞ DisposeStr(P) –∑–∞—Ç–µ–º P:= NewStr(S) }
 
 { Buffer move routines for text views compatibitity }
 
@@ -515,8 +515,8 @@ end;
 var
   saveSS, saveSP : Word;                   {DK}
   MouseStack     : array[1..1024] of Byte; {DK}
-  {°•ß Ì‚Æ£Æ ¨†´ÆØÆ≠Ô‚≠Î• ´†¶® ØÆ§ OS/2 · DPMI - ‚†™Æ• ¢Ø•Á†‚´•≠®•
-  Á‚Æ VMOUSE §´Ô DOS-Box'a §†•‚ ·Æ¢·•¨ ¨†´Æ ·‚•™† ≠† Â„™ int 33}
+  {–±–µ–∑ —ç—Ç–æ–≥–æ –º–∞–ª–æ–ø–æ–Ω—è—Ç–Ω—ã–µ –ª–∞–∂–∏ –ø–æ–¥ OS/2 —Å DPMI - —Ç–∞–∫–æ–µ –≤–ø–µ—á–∞—Ç–ª–µ–Ω–∏–µ
+  —á—Ç–æ VMOUSE –¥–ª—è DOS-Box'a –¥–∞–µ—Ç —Å–æ–≤—Å–µ–º –º–∞–ª–æ —Å—Ç–µ–∫–∞ –Ω–∞ —Ö—É–∫ int 33}
 
 procedure MouseInt; far; assembler;
 asm
@@ -570,7 +570,7 @@ end;
 
 var  {TONY}
   MouseWhereLast: TPoint;
-  MouseCounter: integer;   { >=0 - ¢®§®¨Æ, <0 - ≠•¢®§®¨Æ }
+  MouseCounter: integer;   { >=0 - –≤–∏–¥–∏–º–æ, <0 - –Ω–µ–≤–∏–¥–∏–º–æ }
 
 procedure InitEvents; assembler;
 asm
@@ -711,9 +711,9 @@ begin
     xLen := Max(0, Min(32, ScreenWidth-xxx));
     yLen := Max(0, Min(32, ScreenHeight-yyy));
   end;
-  { á†ØÆ¨≠®‚Ï ØÆ§´Æ¶™„ }
+  { –ó–∞–ø–æ–º–Ω–∏—Ç—å –ø–æ–¥–ª–æ–∂–∫—É }
   QuickSave(xxx, yyy, xLen, yLen);
-  { ç†‡®·Æ¢†‚Ï ¨ÎË™„ }
+  { –ù–∞—Ä–∏—Å–æ–≤–∞—Ç—å –º—ã—à–∫—É }
   DirectMousePut(CurrentMouseCursor^.Image^, xxx, yyy, xFrom, yFrom, xLen, yLen);
 end;
 
@@ -723,7 +723,7 @@ var
 begin
   HoldMouse(True);
   if (MouseCounter >=0) then begin
-    { ÇÆ··‚†≠Æ¢®‚Ï ØÆ§´Æ¶™„ }
+    { –í–æ—Å—Å—Ç–∞–Ω–æ–≤–∏—Ç—å –ø–æ–¥–ª–æ–∂–∫—É }
     with CurrentMouseCursor^ do with MouseWhereLast do begin
       xxx := Max(X-XHotSpot, 0);
       yyy := Max(Y-YHotSpot, 0);
@@ -746,7 +746,7 @@ var
 begin
   HoldMouse(True);
   if MouseCounter >=0 then begin
-    { ÇÆ··‚†≠Æ¢®‚Ï ØÆ§´Æ¶™„ }
+    { –í–æ—Å—Å—Ç–∞–Ω–æ–≤–∏—Ç—å –ø–æ–¥–ª–æ–∂–∫—É }
     with CurrentMouseCursor^ do with MouseWhereLast do begin
       xxx := Max(X-XHotSpot, 0);
       yyy := Max(Y-YHotSpot, 0);
@@ -789,7 +789,7 @@ begin
   if Cur = CurrentMouseCursor then Exit;
   HoldMouse(True);
   if MouseCounter >=0 then begin
-    { ÇÆ··‚†≠Æ¢®‚Ï ØÆ§´Æ¶™„ }
+    { –í–æ—Å—Å—Ç–∞–Ω–æ–≤–∏—Ç—å –ø–æ–¥–ª–æ–∂–∫—É }
     with CurrentMouseCursor^ do with MouseWhereLast do begin
       xxx := Max(X-XHotSpot, 0);
       yyy := Max(Y-YHotSpot, 0);
@@ -817,7 +817,7 @@ begin
 
 
   if MouseCounter >=0 then begin
-    { ÇÆ··‚†≠Æ¢®‚Ï ØÆ§´Æ¶™„ }
+    { –í–æ—Å—Å—Ç–∞–Ω–æ–≤–∏—Ç—å –ø–æ–¥–ª–æ–∂–∫—É }
     with CurrentMouseCursor^ do with MouseWhereLast do begin
       xxx := Max(X-XHotSpot, 0);
       yyy := Max(Y-YHotSpot, 0);
@@ -1070,27 +1070,27 @@ const
   ($0402, $0704, $0005, $0406, $0204, $0302, $0304, $1005, $0E06, $0004);
 asm
         LEA     SI, CRTValues
-        { ê•£®·‚‡ ¨†·™® (2); ê†ß‡•Ë•≠ §Æ·‚„Ø ™ Ø´Æ·™Æ·‚® 2 (4)        }
+        { –†–µ–≥–∏—Å—Ç—Ä –º–∞—Å–∫–∏ (2); –†–∞–∑—Ä–µ—à–µ–Ω –¥–æ—Å—Ç—É–ø –∫ –ø–ª–æ—Å–∫–æ—Å—Ç–∏ 2 (4)        }
         MOV     DX, 03C4h
         LODSW
         OUT     DX, AX
-        { ê•£®·‚‡ ‡•¶®¨† Ø†¨Ô‚® (4);                                  }
-        { ÇÎ°‡†≠ ‚•™·‚Æ¢Î© ‡•¶®¨ (1+), ®·ØÆ´Ïß. ‡†·Ë. Ø†¨Ô‚Ï (2+),    }
-        { ØÆ·´•§Æ¢†‚•´Ï≠Î© §Æ·‚„Ø ™ §†≠≠Î¨ ¢ °®‚Æ¢Æ© Ø´Æ·™Æ·‚® (4+=7) }
+        { –†–µ–≥–∏—Å—Ç—Ä —Ä–µ–∂–∏–º–∞ –ø–∞–º—è—Ç–∏ (4);                                  }
+        { –í—ã–±—Ä–∞–Ω —Ç–µ–∫—Å—Ç–æ–≤—ã–π —Ä–µ–∂–∏–º (1+), –∏—Å–ø–æ–ª—å–∑. —Ä–∞—Å—à. –ø–∞–º—è—Ç—å (2+),    }
+        { –ø–æ—Å–ª–µ–¥–æ–≤–∞—Ç–µ–ª—å–Ω—ã–π –¥–æ—Å—Ç—É–ø –∫ –¥–∞–Ω–Ω—ã–º –≤ –±–∏—Ç–æ–≤–æ–π –ø–ª–æ—Å–∫–æ—Å—Ç–∏ (4+=7) }
         LODSW
         OUT     DX, AX
-        { ê•£®·‚‡ ‡•¶®¨† (5); 0                                       }
+        { –†–µ–≥–∏—Å—Ç—Ä —Ä–µ–∂–∏–º–∞ (5); 0                                       }
         MOV     DX, 03CEh
         LODSW
         OUT     DX, AX
-        { ë¨•Ë†≠Î© ‡•£®·‚‡ (6); ê†ß‡•Ë•≠† †§‡•·†Ê®Ô ™ ß≠†™Æ£•≠,       }
-        { †§‡•· A000 §´Ô 64 K (4)                                     }
+        { –°–º–µ—à–∞–Ω—ã–π —Ä–µ–≥–∏—Å—Ç—Ä (6); –†–∞–∑—Ä–µ—à–µ–Ω–∞ –∞–¥—Ä–µ—Å–∞—Ü–∏—è –∫ –∑–Ω–∞–∫–æ–≥–µ–Ω,       }
+        { –∞–¥—Ä–µ—Å A000 –¥–ª—è 64 K (4)                                     }
         LODSW
         OUT     DX, AX
-        { ê•£®·‚‡ ¢Î°Æ‡† ™†‡‚Î Á‚•≠®Ô (4); è´Æ·™Æ·‚Ï 2 (?)            }
+        { –†–µ–≥–∏—Å—Ç—Ä –≤—ã–±–æ—Ä–∞ –∫–∞—Ä—Ç—ã —á—Ç–µ–Ω–∏—è (4); –ü–ª–æ—Å–∫–æ—Å—Ç—å 2 (?)            }
         LODSW
         OUT     DX, AX
-        { ëÆ°·‚¢•≠≠Æ ß†£‡„ß™† ¢‚Æ‡Æ© Ø´Æ·™Æ·‚® }
+        { –°–æ–±—Å—Ç–≤–µ–Ω–Ω–æ –∑–∞–≥—Ä—É–∑–∫–∞ –≤—Ç–æ—Ä–æ–π –ø–ª–æ—Å–∫–æ—Å—Ç–∏ }
         PUSH    SI
         PUSH    DS
         MOV     AL, [Count]
@@ -1114,11 +1114,11 @@ asm
         POP     DS
         POP     SI
 
-        { ê†ß‡•Ë•≠ §Æ·‚„Ø ™ Ø´Æ·™Æ·‚Ô¨ 0, 1                           }
+        { –†–∞–∑—Ä–µ—à–µ–Ω –¥–æ—Å—Ç—É–ø –∫ –ø–ª–æ—Å–∫–æ—Å—Ç—è–º 0, 1                           }
         MOV     DX, 03C4h
         LODSW
         OUT     DX, AX
-        { ó•‚≠Î• / ≠•Á•‚≠Î•, ™†™ ¢ CGA                                }
+        { –ß–µ—Ç–Ω—ã–µ / –Ω–µ—á–µ—Ç–Ω—ã–µ, –∫–∞–∫ –≤ CGA                                }
         LODSW
         OUT     DX, AX
         MOV     DX, 03CEh
@@ -1336,7 +1336,7 @@ begin
     Exit;
   end;
   if Font^.Width <> 8 then begin
-    RunError(255);  { ç•¢•‡≠Î© ·®·‚•¨≠Î© Ë‡®‰‚ }
+    RunError(255);  { –ù–µ–≤–µ—Ä–Ω—ã–π —Å–∏—Å—Ç–µ–º–Ω—ã–π —à—Ä–∏—Ñ—Ç }
   end;
 
   P := Pointer(Drive + Ord('A'));
@@ -1349,7 +1349,7 @@ begin
   YSize := Font^.Height * 3 + 50;
   XBeg := (ScreenWidth - XSize) div 2;
   XEnd := XBeg + XSize;
-  YBeg := (ScreenHeight - YSize) div 3;  { è•‡¢†Ô ‚‡•‚Ï Ì™‡†≠† }
+  YBeg := (ScreenHeight - YSize) div 3;  { –ü–µ—Ä–≤–∞—è —Ç—Ä–µ—Ç—å —ç–∫—Ä–∞–Ω–∞ }
   YEnd := YBeg + YSize;
   if Length(SRetryOrCancel) < Length(S) then begin
     Beg1 := XBeg;

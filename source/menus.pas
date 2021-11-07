@@ -20,21 +20,21 @@ const
 
 { Color palettes }
 
-{                �����������������������������������������������ͻ }
-{ CMenuView      � 1 � 2 � 3 � 4 � 5 � 6 � 7 � 8 � 9 � A � B � C � }
-{                �����������������������������������������������ͼ }
-{ Text Normal fore �   �   �   �   �   �   �   �   �   �   �   �   }
-{             back �����   �   �   �   �   �   �   �   �   �   �   }
-{ Text Disabled fore �������   �   �   �   �   �   �   �   �   �   }
-{               back �����������   �   �   �   �   �   �   �   �   }
-{ Text Shortcut fore ���������������   �   �   �   �   �   �   �   }
-{ Selected Normal fore �����������������   �   �   �   �   �   �   }
-{                 back ���������������������   �   �   �   �   �   }
-{ Selected Disabled fore �����������������������   �   �   �   �   }
-{                   back ���������������������������   �   �   �   }
-{ Selected Shortcut fore �������������������������������   �   �   }
-{ 3D  bright �����������������������������������������������   �   }
-{       dark ���������������������������������������������������   }
+{                ╔═══╤═══╤═══╤═══╤═══╤═══╤═══╤═══╤═══╤═══╤═══╤═══╗ }
+{ CMenuView      ║ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ A │ B │ C ║ }
+{                ╚═╤═╧═╤═╧═╤═╧═╤═╧═╤═╧═╤═╧═╤═╧═╤═╧═╤═╧═╤═╧═╤═╧═╤═╝ }
+{ Text Normal fore ┘   │   │   │   │   │   │   │   │   │   │   │   }
+{             back ────┘   │   │   │   │   │   │   │   │   │   │   }
+{ Text Disabled fore ──────┘   │   │   │   │   │   │   │   │   │   }
+{               back ──────────┘   │   │   │   │   │   │   │   │   }
+{ Text Shortcut fore ──────────────┘   │   │   │   │   │   │   │   }
+{ Selected Normal fore ────────────────┘   │   │   │   │   │   │   }
+{                 back ────────────────────┘   │   │   │   │   │   }
+{ Selected Disabled fore ──────────────────────┘   │   │   │   │   }
+{                   back ──────────────────────────┘   │   │   │   }
+{ Selected Shortcut fore ──────────────────────────────┘   │   │   }
+{ 3D  bright ──────────────────────────────────────────────┘   │   }
+{       dark ──────────────────────────────────────────────────┘   }
 
   CMenuView   = #2#3#4#5#6#7#8#9#10#11#12#13;
   CStatusLine = #2#3#4#5#6#7#8#9#10#11#12#13;

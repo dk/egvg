@@ -10,7 +10,7 @@ Unit EGCursor;
  *                                                                *
  ******************************************************************)
 
-interface uses Objects,  GDI;  { ë‚†≠§†‡‚≠Î• Æ°Í•™‚Î Borland Pascal }
+interface uses Objects,  GDI;  { –°—Ç–∞–Ω–¥–∞—Ä—Ç–Ω—ã–µ –æ–±—ä–µ–∫—Ç—ã Borland Pascal }
 
 const
   MaxTextCursorWidth = 16;
@@ -25,7 +25,7 @@ type
    public
     constructor Init;
     procedure SetWidth(w: TextCursorWidth);
-    procedure SetHeight(h: byte);  { §´Ô Ø•‡•≠†ß≠†Á•≠®Ô ™ÆÆ‡§®≠†‚ }
+    procedure SetHeight(h: byte);  { –¥–ª—è –ø–µ—Ä–µ–Ω–∞–∑–Ω–∞—á–µ–Ω–∏—è –∫–æ–æ—Ä–¥–∏–Ω–∞—Ç }
     procedure SetStdIns(l: TextCursorLines);
     procedure SetStdOvr(l: TextCursorLines);
     procedure SetNonStd(l: TextCursorLines);
@@ -100,7 +100,7 @@ begin
   end else Width := w;
 end;
 
-procedure TTextCursor.SetHeight(h: byte);  { §´Ô Ø•‡•≠†ß≠†Á•≠®Ô ™ÆÆ‡§®≠†‚ }
+procedure TTextCursor.SetHeight(h: byte);  { –¥–ª—è –ø–µ—Ä–µ–Ω–∞–∑–Ω–∞—á–µ–Ω–∏—è –∫–æ–æ—Ä–¥–∏–Ω–∞—Ç }
 begin
   if h = Height then Exit;
   if Shown then begin

@@ -1,13 +1,13 @@
 {$F+,I-}
 {
-  ÛßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßÛ
-  Û Unit        : Printers Device Interface                            Û
-  Û Description : Virtual Graphics Common Routines                     Û
-  Û Author      : Dmitry Karasik                                       Û
-  Û Version     : X01.00 (internal)                                    Û
-  Û Release     : 01.00                                                Û
-  Û Last update : 26-MAR-1997                                          Û
-  ÛÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÛ
+  â–ˆâ–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–€â–ˆ
+  â–ˆ Unit        : Printers Device Interface                            â–ˆ
+  â–ˆ Description : Virtual Graphics Common Routines                     â–ˆ
+  â–ˆ Author      : Dmitry Karasik                                       â–ˆ
+  â–ˆ Version     : X01.00 (internal)                                    â–ˆ
+  â–ˆ Release     : 01.00                                                â–ˆ
+  â–ˆ Last update : 26-MAR-1997                                          â–ˆ
+  â–ˆâ–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–„â–ˆ
 }
 
 Unit Printers;
@@ -31,29 +31,29 @@ Type
   PPrinter = ^TPrinter;
   TPrinter = Object(TObject)
   {user variables}
-    PaintInfo   : TPaintInfo;      {Š àâ  ¢ë¢®¤  ( ­ «®£¨ - HDC, TCanvas)}
-    Palette     : TLogPalette;     { «¨âà  ¤«ï æ¢¥â­®£® ¢ë¢®¤  (HPALETTE)}
-    Font        : TFont;           {˜à¨äâ}
-    Orientation : TOrientation;    {à¨¥­â æ¨ï áâà ­¨æë}
-    PaperSize   : TPaperSize;      { §¬¥à áâà ­¨æë}
-    PageNumber  : Integer;         {®¬¥à áâà ­¨æë}
-    Name        : String;          { ¨¬¥­®¢ ­¨¥ ¤à ©¢¥à }
-    FormFeed    : Boolean;         {„®¡ ¢«ï¥â #12 ¢ ª®­æ¥; ¯®¤¤¥à¦¨¢ ¥âáï ®¯æ¨®­ «ì­®}
+    PaintInfo   : TPaintInfo;      {ĞšĞ°Ñ€Ñ‚Ğ° Ğ²Ñ‹Ğ²Ğ¾Ğ´Ğ° (Ğ°Ğ½Ğ°Ğ»Ğ¾Ğ³Ğ¸ - HDC, TCanvas)}
+    Palette     : TLogPalette;     {ĞŸĞ°Ğ»Ğ¸Ñ‚Ñ€Ğ° Ğ´Ğ»Ñ Ñ†Ğ²ĞµÑ‚Ğ½Ğ¾Ğ³Ğ¾ Ğ²Ñ‹Ğ²Ğ¾Ğ´Ğ° (HPALETTE)}
+    Font        : TFont;           {Ğ¨Ñ€Ğ¸Ñ„Ñ‚}
+    Orientation : TOrientation;    {ĞÑ€Ğ¸ĞµĞ½Ñ‚Ğ°Ñ†Ğ¸Ñ ÑÑ‚Ñ€Ğ°Ğ½Ğ¸Ñ†Ñ‹}
+    PaperSize   : TPaperSize;      {Ğ Ğ°Ğ·Ğ¼ĞµÑ€ ÑÑ‚Ñ€Ğ°Ğ½Ğ¸Ñ†Ñ‹}
+    PageNumber  : Integer;         {ĞĞ¾Ğ¼ĞµÑ€ ÑÑ‚Ñ€Ğ°Ğ½Ğ¸Ñ†Ñ‹}
+    Name        : String;          {ĞĞ°Ğ¸Ğ¼ĞµĞ½Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ´Ñ€Ğ°Ğ¹Ğ²ĞµÑ€Ğ°}
+    FormFeed    : Boolean;         {Ğ”Ğ¾Ğ±Ğ°Ğ²Ğ»ÑĞµÑ‚ #12 Ğ² ĞºĞ¾Ğ½Ñ†Ğµ; Ğ¿Ğ¾Ğ´Ğ´ĞµÑ€Ğ¶Ğ¸Ğ²Ğ°ĞµÑ‚ÑÑ Ğ¾Ğ¿Ñ†Ğ¸Ğ¾Ğ½Ğ°Ğ»ÑŒĞ½Ğ¾}
   {developer variables}
-    PS          : PStream;         {®â®ª ¢ë¢®¤ . ‡ ç áâãî ¯à®áâ® prn}
-    PM          : PImage;          {Š àâ  ¢ë¢®¤ , ­  ª®â®àãî ááë« ¥âáï PaintInfo}
-    Size, Res   : TPoint;          { §¬¥à «¨áâ  ¢ ¯¨ªá¥« å ¨ à §à¥è¥­¨¥ ¢ â®çª å}
-    ColorType   : Word;            {–¢¥â­®áâì ª àâë (imXXXX)}
-    Quality     : Boolean;         {Š ç¥áâ¢® ¯¥ç â¨}
-    BPL         : Word;            { §¬¥à «¨­¥©ª¨ PM}
-    NextPrinter : PPrinter;        {‘«¥¤ãîé¨© ¯à¨­â¥à ¢ æ¥¯®çª¥, á¬. EnumPrinters}
+    PS          : PStream;         {ĞŸĞ¾Ñ‚Ğ¾Ğº Ğ²Ñ‹Ğ²Ğ¾Ğ´Ğ°. Ğ—Ğ°Ñ‡Ğ°ÑÑ‚ÑƒÑ Ğ¿Ñ€Ğ¾ÑÑ‚Ğ¾ prn}
+    PM          : PImage;          {ĞšĞ°Ñ€Ñ‚Ğ° Ğ²Ñ‹Ğ²Ğ¾Ğ´Ğ°, Ğ½Ğ° ĞºĞ¾Ñ‚Ğ¾Ñ€ÑƒÑ ÑÑÑ‹Ğ»Ğ°ĞµÑ‚ÑÑ PaintInfo}
+    Size, Res   : TPoint;          {Ğ Ğ°Ğ·Ğ¼ĞµÑ€ Ğ»Ğ¸ÑÑ‚Ğ° Ğ² Ğ¿Ğ¸ĞºÑĞµĞ»Ğ°Ñ… Ğ¸ Ñ€Ğ°Ğ·Ñ€ĞµÑˆĞµĞ½Ğ¸Ğµ Ğ² Ñ‚Ğ¾Ñ‡ĞºĞ°Ñ…}
+    ColorType   : Word;            {Ğ¦Ğ²ĞµÑ‚Ğ½Ğ¾ÑÑ‚ÑŒ ĞºĞ°Ñ€Ñ‚Ñ‹ (imXXXX)}
+    Quality     : Boolean;         {ĞšĞ°Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¿ĞµÑ‡Ğ°Ñ‚Ğ¸}
+    BPL         : Word;            {Ğ Ğ°Ğ·Ğ¼ĞµÑ€ Ğ»Ğ¸Ğ½ĞµĞ¹ĞºĞ¸ PM}
+    NextPrinter : PPrinter;        {Ğ¡Ğ»ĞµĞ´ÑƒÑÑ‰Ğ¸Ğ¹ Ğ¿Ñ€Ğ¸Ğ½Ñ‚ĞµÑ€ Ğ² Ñ†ĞµĞ¿Ğ¾Ñ‡ĞºĞµ, ÑĞ¼. EnumPrinters}
   {user functions}
     Constructor Init(OutputTo : PStream; AName : String; AResX, AResY : Integer);
     Destructor  Done; Virtual;
-    Function    BeginDoc : Boolean;                     {­ ç «® ¯¥ç â¨}
+    Function    BeginDoc : Boolean;                     {Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ¾ Ğ¿ĞµÑ‡Ğ°Ñ‚Ğ¸}
     Procedure   BeginDocIndirect(Map : PImage);
-    Procedure   NewPage;                                {­®¢ ï áâà ­¨æ }
-    Procedure   EndDoc;                                 {ª®­¥æ ¯¥ç â¨}
+    Procedure   NewPage;                                {Ğ½Ğ¾Ğ²Ğ°Ñ ÑÑ‚Ñ€Ğ°Ğ½Ğ¸Ñ†Ğ°}
+    Procedure   EndDoc;                                 {ĞºĞ¾Ğ½ĞµÑ† Ğ¿ĞµÑ‡Ğ°Ñ‚Ğ¸}
     Procedure   SetOutput(NewStream : PStream);
     Procedure   SetPaperSize(P : TPaperSize; O : TOrientation);
     Procedure   SetResolution(AResX, AResY : Integer);

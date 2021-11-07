@@ -266,9 +266,9 @@ var
     while (W_hi = 0) and (W_norm < Byte(Str[0])) do
     begin
       while (W_norm < Byte(Str[0])) and not (Str[1 + W_norm] in ['A'..'Z','_','$']) do
-        Inc(W_norm); {¢ë¡à âì ¯à®¡¥«ë}
+        Inc(W_norm); {Ð²Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð±ÐµÐ»Ñ‹}
       while ((W_norm + W_hi) < Byte(Str[0])) and (Str[1 + W_norm + W_hi] in ['A'..'Z','_','$'])  do
-        Inc(W_hi); {¢ë¡à âì á«®¢®}
+        Inc(W_hi); {Ð²Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ ÑÐ»Ð¾Ð²Ð¾}
       if (W_hi > 0) and not Find(Copy(Str, 1 + W_norm, W_hi)) then
       begin
         Inc(W_norm, W_hi);

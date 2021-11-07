@@ -1,50 +1,50 @@
 {
-  ����������������������������������������������������������������������
-  � Unit        : NOTEBOOK                                             �
-  �                                                                    �
-  � Description : �࣠������ �������࠭�筮�� ������� � ���� ������   �
-  �               � ��ॢ��稢��騬��� ��࠭�栬� - TNoteBook.        �
-  �                                                                    �
-  �               �࣠������ 横���᪮�� ������� � ���� ������       �
-  �               � ��ॢ��稢��騬��� ��࠭�栬� - TListBook.        �
-  �                                                                    �
-  � Author      : ����� �.�.  ��१�� �.�.                             �
-  ����������������������������������������������������������������������
-  � Remarks     :                                                      �
-  �                       TNoteBook                                    �
-  �                                                                    �
-  �    1. �ᯮ������� ������� � ����ࠬ� 300..303.                    �
-  �    2. �ᯮ������ BitMap � ����஬ 209.                           �
-  �    3. ��⮤� GetData � SetData ��뢠���� ��� �⤥���� ��࠭��    �
-  �       � ������ �� ��४��祭��, � ��� ⥪�饩 ��࠭��� ⠪�� ��   �
-  �       ���� � ��室�.                                             �
-  �    4. �᫥��⢨� ����࠭�筮�� ��堭���� �맮��� GetData/SetData   �
-  �       ExecuteDialog(TNoteBook, ...) �ᥣ�� �����頥� cmOK.        �
-  �    5. ��ꥪ�� TVISION, �������騥 �� ࠢ�� ��� DataSize, ��    �
-  �       ������ ��⠢������ �����।�⢥��� � TNoteBook (⮫쪮 �     �
-  �       ��࠭���).                                                   �
-  �    6. ����������� ��࠭��� ��ꥤ������� � ��㯯� � ��ࢮ�         �
-  �       �।�����饩 �����������. ��६�饭�� �� ��࠭�栬         �
-  �       �����⢫����� �� ����� ������ "�����"/"��ࠢ�" ��� ������ �
-  �       PgUp/PgDn. �� ����� ��࠭��� ��㯯�, �஬� ⮣�, �����      �
-  �       ��४�������, ��ࠢ �� ����� "���" �������� �           �
-  �       ��������� �⮩ ��࠭���.                                     �
-  �       �᫨ ������⢮ ��㯯 ���⮫쪮 ������, �� �� ���ᮢ��    �
-  �       �� �������� �� ��������� � ������ �������, � ��譨�       �
-  �       �������� �� ���ᮢ뢠����, � ���室 � �⨬ ��࠭�栬       �
-  �       �����⢫���� ⮫쪮 �� ����� ������ ��� ������.          �
-  �    7. ��� ��⠭���� ��砫쭮� ��࠭��� ��᫥ ���������� ���       �
-  �       ��࠭�� ᫥��� �ᯮ�짮���� SetPage(����� ��࠭���).        �
-  �       �� 㬮�砭�� ��⠭���������� 0-��.                           �
-  �                                                                    �
-  �                       TListBook                                    �
-  �                                                                    �
-  �    1. � ����⢥ ������ �ᯮ������ ^PCollection.                 �
-  �    2. �ᥣ�� ��⠭���������� 0-�� ��砫쭠� ��࠭��.              �
-  �    3. ��ꥪ�� TVISION ������ ��⠢������ �����।�⢥��� �         �
-  �       TListBook (��ꥪ��, ��⠢����� � ��࠭���, �������).       �
-  �                                                                    �
-  ����������������������������������������������������������������������
+  █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+  █ Unit        : NOTEBOOK                                             █
+  █                                                                    █
+  █ Description : Организация многостраничного диалога в виде книжки   █
+  █               с переворачивающимися страницами - TNoteBook.        █
+  █                                                                    █
+  █               Организация циклического диалога в виде книжки       █
+  █               с переворачивающимися страницами - TListBook.        █
+  █                                                                    █
+  █ Author      : Шимон Ю.И.  Березин А.В.                             █
+  █════════════════════════════════════════════════════════════════════█
+  █ Remarks     :                                                      █
+  █                       TNoteBook                                    █
+  █                                                                    █
+  █    1. Используются команды с номерами 300..303.                    █
+  █    2. Используется BitMap с номером 209.                           █
+  █    3. Методы GetData и SetData вызываются для отдельных страниц    █
+  █       в момент их переключения, а для текущей страницы также при   █
+  █       старте и выходе.                                             █
+  █    4. Вследствие постраничного механизма вызовов GetData/SetData   █
+  █       ExecuteDialog(TNoteBook, ...) всегда возвращает cmOK.        █
+  █    5. Объекты TVISION, возвращающие не равный нулю DataSize, не    █
+  █       должны вставляться непосредственно в TNoteBook (только в     █
+  █       страницы).                                                   █
+  █    6. Неименованые страницы объединяются в группу с первой         █
+  █       предшествующей именованной. Перемещения по страницам         █
+  █       осуществляются при помощи кнопок "влево"/"вправо" или клавиш █
+  █       PgUp/PgDn. На первую страницу группы, кроме того, можно      █
+  █       переключиться, выбрав при помощи "мыши" закладку с           █
+  █       названием этой страницы.                                     █
+  █       Если количество групп настолько велико, что при отрисовке    █
+  █       их закладки не помещаются в области диалога, то лишние       █
+  █       закладки не отрисовываются, а переход к этим страницам       █
+  █       осуществляется только при помощи кнопок или клавиш.          █
+  █    7. Для установки начальной страницы после добавления всех       █
+  █       страниц следует использовать SetPage(номер страницы).        █
+  █       По умолчанию устанавливается 0-ая.                           █
+  █                                                                    █
+  █                       TListBook                                    █
+  █                                                                    █
+  █    1. В качестве данных используется ^PCollection.                 █
+  █    2. Всегда устанавливается 0-ая начальная страница.              █
+  █    3. Объекты TVISION должны вставляться непосредственно в         █
+  █       TListBook (объекты, вставленные в страницы, теряются).       █
+  █                                                                    █
+  █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 }
 
 unit NoteBook;
@@ -167,9 +167,9 @@ implementation
 procedure NoteBook_Hole; external;   {209}
 
 {
-  ���������������������������������������������������������ķ
-  �                                                         �
-  ���������������������������������������������������������ͼ
+  ┌─────────────────────────────────────────────────────────╖
+  │                                                         ║
+  ╘═════════════════════════════════════════════════════════╝
 }
 constructor TPage.Init(const ATitle: String);
 var
@@ -189,9 +189,9 @@ begin
 end;
 
 {
-  ���������������������������������������������������������ķ
-  �                                                         �
-  ���������������������������������������������������������ͼ
+  ┌─────────────────────────────────────────────────────────╖
+  │                                                         ║
+  ╘═════════════════════════════════════════════════════════╝
 }
 constructor TNoteBook.Init(var Bounds: TRect; ATitle: TTitleStr; APlace: TNoteBookPlace);
 var
@@ -295,7 +295,7 @@ var
 begin
   if (APage = nil) or (APage = Page) then exit;
   Lock;
-  { ��⠢�� �⠭������ ���⮭稪��, �᫨ ���� }
+  { Вставка стандартных буттончиков, если надо }
   if ButtonRight = nil then begin
     PNoteBookFrame(Frame)^.GetFirstRectangle(R);
     R.A.X := R.B.X - BitMapWidth(GetImage(7));
@@ -316,7 +316,7 @@ begin
     Insert(ButtonLeft);
   end;
 
-  { �������� ��������� fields`��}
+  { Удаление существующих fields`ов}
   if Assigned(Page) then begin
     if Assigned(DataPtr) then begin
       i := PageIndex(Page);
@@ -325,7 +325,7 @@ begin
     ViewsRemove;
   end;
 
-  { ��⠢�� ����� }
+  { Вставка новых }
   Page := APage;
   ViewsInsert;
   if Assigned(DataPtr) then begin
@@ -364,7 +364,7 @@ begin
   if Page = nil then SetPage(0);
 
   if ((Event.What and evMessage) <> 0) and (Event.Command = cmCancel) then
-    Event.Command := cmOK; {��� GetData`�஢���� ⥪�饣� Page`�}
+    Event.Command := cmOK; {для GetData`ирования текущего Page`а}
 
   inherited HandleEvent(Event);
   if (Event.What = evKeyDown) then begin
@@ -404,7 +404,7 @@ begin
   if P = nil then GetPageWidth := 0 else GetPageWidth := FontWidth(P^);
 end;
 
-function TNoteBook.NumGroups : integer; { ��᫮ ��࠭�� � ����������� }
+function TNoteBook.NumGroups : integer; { Число страниц с заголовками }
 var
   i: integer;
 begin
@@ -542,9 +542,9 @@ begin
 end;
 
 {
-  ���������������������������������������������������������ķ
-  � TNoteBookFrame                                          �
-  ���������������������������������������������������������ͼ
+  ┌─────────────────────────────────────────────────────────╖
+  │ TNoteBookFrame                                          ║
+  ╘═════════════════════════════════════════════════════════╝
 }
 constructor TNoteBookFrame.Init(var Bounds: TRect);
 begin
@@ -772,9 +772,9 @@ begin
 end;
 
 {
-  ���������������������������������������������������������ķ
-  � TNoteBookHorizontalFrame                                �
-  ���������������������������������������������������������ͼ
+  ┌─────────────────────────────────────────────────────────╖
+  │ TNoteBookHorizontalFrame                                ║
+  ╘═════════════════════════════════════════════════════════╝
 }
 procedure TNoteBookHorizontalFrame.GetLastRectangle(var R: TRect);
 var
@@ -876,9 +876,9 @@ end;
 
 
 {
-  ���������������������������������������������������������ķ
-  � TListBook                                               �
-  ���������������������������������������������������������ͼ
+  ┌─────────────────────────────────────────────────────────╖
+  │ TListBook                                               ║
+  ╘═════════════════════════════════════════════════════════╝
 }
 
 function TListBook.DataSize: word;
