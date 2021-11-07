@@ -1,0 +1,15 @@
+RGB <-> HLS conversions.
+            _____
+H = arcsin(û 3/2 Ð(G-R)/S)
+
+L = (R+G+B)/3
+     ____________________
+S = ûRý+Gý+Bý-BÐG-BÐR-GÐR
+                        __
+R = L - 1/3ÐSÐcos(T)-1/û 3 ÐSÐsin(T)
+
+G = L + 2/3ÐSÐcos(T)
+                        __
+B = L - 1/3ÐSÐcos(T)+1/û 3 ÐSÐsin(T)
+
+Œ pâ¨­¥á "‘¨­â¥§ ¨§®¡p ¦¥­¨©....." áâp. 144

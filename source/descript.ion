@@ -1,0 +1,64 @@
+afterdrk.pas Sample screensavers
+app.pas (c)Borland Intl, port
+bgifont.pas BGI font handler
+bitmaps.pas Bitmap routines
+blaster.pas Sound blaster driver
+calc.pas (c)Borland Intl, port
+cdialogs.pas Magenta-painted local dialog
+colorsel.pas Color selection dialog
+dialogs.pas (c)Borland Intl, port
+drivers.pas (c)Borland Intl, port
+editors.pas (c)Borland Intl, port
+egcolor.pas Color scheme manager
+egcursor.pas Text caret emulation
+egdate.pas TpDate   (c)TurboPower, port
+egdpmi.pas TpDpmi (c)TurboPower, port
+egfont.pas Generic fonts
+eginline.pas TpInline (c)TurboPower, port
+egprint.pas Generic text printer
+egscrsav.pas Generic screensaver
+egstring.pas TpString (c)TurboPower, port
+egvg.pas EGA/VGA 16-color driver
+eshield.pas Exception shield
+fields.pas Some useful miscellaneous objects and routines
+flick.pas FLI handler
+fntlib.pas Font library
+gadgets.pas (c)Borland Intl, port
+gauges.pas (c)Borland Intl, port
+gdi.pas Graphics device interface module
+histlist.pas (c)Borland Intl, port
+image.pas Extension to BMP/PCX/GIF loaders
+inifile.pas INI file handler
+inputs.pas Various input lines
+labels.pas Small TV-style objects
+memdebug.pas Memory usage tracer
+memory.pas (c)Borland Intl, port
+menus.pas (c)Borland Intl, port
+mmonolog.pas TDialog modification
+mono.pas VGA Mono driver
+msgbox.pas (c)Borland Intl, port
+mzresour.pas NewEXE/DLL resource handling
+notebook.pas Notebook object
+objects.pas (c)Borland Intl, port
+outline.pas (c)Borland Intl, port
+palettes.pas 256-color palette manager
+printers.pas Generic graphics printers
+prot386.pas ISR shield
+speaker.pas Speaker driver
+stddlg.pas (c)Borland Intl, port
+streams.pas Generic streams/LZW
+strings.pas (c)Borland Intl, port
+svga16m.pas SVGA 16M-color driver
+svga256.pas SVGA 256-color driver
+svga32k.pas SVGA 32K-color driver
+svga64k.pas SVGA 64K-color driver
+textview.pas (c)Borland Intl, port
+truetype.pas Extension to TrueType library
+validate.pas (c)Borland Intl, port
+vapp.pas Virtual application object
+vesa.pas Local VESA routiones
+views.pas (c)Borland Intl, port
+wallpape.pas Sample wallpapers
+waveplay.pas Extension to wave player
+wstddlg.pas Windows-style standard dialogs
+xmm.pas XMM stream

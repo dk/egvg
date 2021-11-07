@@ -1,0 +1,29 @@
+CHAR.ASM Routines for drivers.pas
+CONCRETE.ASM Wallpaper "concrete"
+DOOMWALL.ASM Wallpaper "doom"
+EGBM.ASM String handling routines
+EGCASE.ASM String handling routines
+EGCOMMON.ISM String handling routines
+EGCOMP.ASM String handling routines
+EGSEARCH.ASM String handling routines
+EGTAB.ASM String handling routines
+EGVG.ASM Routines for EGVG.PAS
+FLICUTIL.ASM Flic subroutines
+FOLDERS.ASM Bitmaps for TChDirDialog
+FORMAT.ASM FormatStr procedure 
+GDI.ASM Grafix device interface junction
+HOLE.ASM Bitmaps for notebook
+LEATHER.ASM Wallpaper "leather"
+MFONT.ASM Default system font
+SDI.ASM Sound device interface junction
+SKBFNT.ASM Additional monospaced fonts
+SNDDELAY.ASM Sound, Delay etc. routines
+STDCRM.ASM Internal tables
+STDCUR.ASM Standard cursors
+SYSINT.ASM System interrupt handler for drivers.pas
+WINICONS.ASM Windows icons bitmaps
+_BUTTONR.ASM Yes/No/OK/Cancel buttons, russian
+_BUTTONS.ASM Yes/No/OK/Cancel buttons, english
+_CHECKS.ASM Bitmaps for ChechBoxes/RadioButtons
+_SCROLLS.ASM Bitmaps for scrollbar/dropdown/lists
+_SIGNS.ASM Bitmaps for MessageBox

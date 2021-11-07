@@ -1,0 +1,25 @@
+SVG_01.EXE Generic "Preliminary" 256-color sample
+svg_01.pas Generic "Preliminary" 256-color sample
+SVG_02.EXE "Windows setup background" sample
+SVG_02.PAS "Windows setup background" sample
+SVG_03.EXE "VIO flame" sample
+svg_03.pas "VIO flame" sample
+SVG_04.EXE "PaintBrush" sample
+svg_04.pas "PaintBrush" sample
+SVG_05.EXE "TrueType fonts viewer" sample
+svg_05.pas "TrueType fonts viewer" sample
+SVG_06.EXE "Bitmap viewer" sample
+svg_06.pas "Bitmap viewer" sample
+SVG_07.EXE "Color dithering" sample
+svg_07.pas "Color dithering" sample
+SVG_08.EXE "Fill patterns" sample
+svg_08.pas "Fill patterns" sample
+SVG_09.EXE "Video benchmark" sample
+svg_09.pas "Video benchmark" sample
+SVG_10.EXE "Standard font & color dialogs" sample
+svg_10.pas "Standard font & color dialogs" sample
+svg_11.exe "Print logo" sample
+svg_11.pas "Print logo" sample
+SVG_12.EXE Generic "Turbo Vision Editor" sample
+svg_12.pas Generic "Turbo Vision Editor" sample
+svg_13.pas "Workplace Shell" sample

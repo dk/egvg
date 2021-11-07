@@ -1,0 +1,113 @@
+       Файлы, входящие в состав библиотеки SVG (Super Video Graphics)
+                   версии 3.00, варианта 013/004.
+
+_BUTTONS.ASM - содержит изображения в кодовом сегменте, используемые для
+               отрисовки стандартных кнопок "OK", "Cancel", "Yes", "No".
+_BUTTONS.OBJ - ассемблированный _BUTTONS.ASM.
+_CHECKS.ASM   - содержит изображения в кодовом сегменте, используемые для
+               отрисовки Check Boxes, Radio Buttons и Combo Boxes (History).
+_CHECKS.OBJ   - ассемблированный _CHECKS.ASM.
+_SCROLLS.ASM
+_SCROLLS.OBJ  - ассемблированный
+_SIGNS.ASM
+_SIGNS.OBJ    - ассемблированный
+ALT8X14.OBJ  - содержит текстовый шрифт в альтернативной кодировке
+               размера 8x14. Используется в DRIVERS.PAS при определенном
+               символе IncludeFonts.
+ALT8X16.OBJ  - содержит текстовый шрифт в альтернативной кодировке
+               размера 8x16. Используется в DRIVERS.PAS при определенном
+               символе IncludeFonts.
+ALT8X8.OBJ   - содержит текстовый шрифт в альтернативной кодировке
+               размера 8x16. Используется в DRIVERS.PAS при определенном
+               символе IncludeFonts.
+AFTERDRK.PAS - два screensaver'a.
+APP.PAS      - стандартный модуль. Объекты TDesktop, TProgram, TApplication,
+               TBackground и др.
+BGIFONT.PAS  - поддержка BGI-шрифтов
+BITMAPS.PAS  - Работа с изображениями
+BMPPACK.PAS  - Паковщик/распаковщик BMP-файлов
+BUILDTV.PAS  - ничего не делающая программа, служит для перекомпиляции
+               библиотеки.
+CHAR.ASM     - встроенный русификатор/украинизатор клавиатуры. Используется
+               в DRIVERS.PAS при определенном символе Russian либо Ukrainian.
+CHAR.OBJ     - ассемблированный CHAR.ASM для Real-mode приложений.
+CHAR.OBP     - ассемблированный CHAR.ASM для DPMI-приложений.
+COLORSEL.PAS - модуль оригинального Turbo Vision, не переделанный для EG.
+CONCRETE.ASM - содержит изображение в кодовом сегменте, используемое для
+               задания Wallpapers.
+CONCRETE.OBJ - ассемблированный CONCRETE.ASM.
+COURIER.OBJ  - содержит шрифт Courier Cyrillic в кодовом сегменте.
+CURCYR.FNT   - содержит шрифт Courier Cyrillic.
+DIALOGS.PAS  - содержит реализацию большинства стандартных интерфейсных
+               объектов, использующихся в диалогах. Стандартный модуль.
+DRIVERS.PAS  - низкоуровневая работа с клавиатурой, мышью, критическими
+               ошибками и экраном (кроме процедур графики). Стандартный
+               модуль.
+DUMMY.DLL    - пустой DLL-файл (нет кода, нет ресурсов).
+EDITORS.PAS  - содержит реализацию объектов редактирования текста. Стандартный модуль.
+EGBM.ASM     - используется в EGSTRING.PAS.
+EGBM.OBJ     - ассемблированный EGBM.ASM.
+EGCASE.ASM   - используется в EGSTRING.PAS.
+EGCASE.OBJ   - ассемблированный EGCASE.ASM.
+EGCOMMON.ISM
+EGCOMP.ASM
+EGCOMP.OBJ   - ассемблированный
+EGCURSOR.PAS
+EGDATE.PAS
+EGDIFF.DOC
+EGDPMI.PAS
+EGFONT.PAS
+EGINLINE.PAS
+EGPRINT.PAS
+EGSCRSAV.PAS
+EGSEARCH.ASM
+EGSEARCH.OBJ - ассемблированный
+EGSTRING.PAS
+EGTAB.ASM
+EGTAB.OBJ    - ассемблированный
+FIELDS.PAS
+FNTLIB.PAS
+FONT.FNT
+FORMAT.ASM
+FORMAT.OBJ   - ассемблированный
+GADGETS.PAS
+HISTLIST.PAS
+LARGE.FNT
+LEATHER.ASM
+LEATHER.OBJ  - ассемблированный
+FILELIST     - этот файл
+FLICK.PAS
+MEMORY.PAS
+MENUS.PAS
+MFONT.ASM
+MFONT.OBJ    - ассемблированный
+MINI.FNT
+MK.BAT
+MSGBOX.PAS
+MZRESOUR.PAS
+OBJECTS.PAS
+OUTLINE.PAS
+PALETTES.PAS
+SCROLLS.ASM
+SCROLLS.OBJ  - ассемблированный
+SMALL.OBJ
+STDCUR.ASM
+STDCUR.OBJ   - ассемблированный
+STDDLG.PAS
+STRINGS.PAS
+SVGA.PAS
+SYSINT.ASM
+SYSINT.OBJ   - ассемблированный
+SYSINT.OBP   - ассемблированный
+TEXTVIEW.PAS
+VALIDATE.PAS
+VIEWS.PAS
+WALLPAPE.PAS
+WRSTRN.INC
+WRSTRO.INC
+NOTEBOOK.PAS
+WAVEPLAY.PAS
+HOLE.ASM
+HOLE.OBJ     - ассемблированный
+TO_DO.013    - файл с описанием, что мы собираемся добавить/изменить
+WHATSNEW.013 - файл с описанием последних изменений

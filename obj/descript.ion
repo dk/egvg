@@ -1,0 +1,33 @@
+CHAR.OBJ Routines for drivers.pas
+CHAR.OBP Routines for drivers.pas + DPMI
+CONCRETE.OBJ Wallpaper "concrete"
+COURIER.OBJ Font "courier monospaced"
+DOOMWALL.OBJ Wallpaper "doom"
+EGBM.OBJ String handling routines
+EGCASE.OBJ String handling routines
+EGCOMP.OBJ String handling routines
+EGSEARCH.OBJ String handling routines
+EGTAB.OBJ String handling routines
+EGVG.OBJ Routines for EGVG.PAS
+FLICUTIL.OBJ Flic subroutines
+FOLDERS.OBJ Bitmaps for TChDirDialog
+FORMAT.OBJ FormatStr procedure
+GDI.OBJ Grafix device interface junction
+HOLE.OBJ Bitmaps for notebook
+IMPLODE.OBJ LZW internal routines, (c) PKWARE Inc.
+LEATHER.OBJ Wallpaper "leather"
+MFONT.OBJ Default system font
+SDI.OBJ Sound device interface junction
+SKBFNT.OBJ Additional monospaced fonts
+SMALL.OBJ Font "little monospaced"
+SNDDELAY.OBJ Sound, Delay etc. routines
+STDCRM.OBJ Internal tables
+STDCUR.OBJ Standard cursors
+SYSINT.OBJ System interrupt handler for drivers.pas
+SYSINT.OBP System interrupt handler for drivers.pas + DPMI
+WINICONS.OBJ Windows icons bitmaps
+_BUTTONR.OBJ Yes/No/OK/Cancel buttons, russian
+_BUTTONS.OBJ Yes/No/OK/Cancel buttons, english
+_CHECKS.OBJ Bitmaps for ChechBoxes/RadioButtons
+_SCROLLS.OBJ Bitmaps for scrollbar/dropdown/lists
+_SIGNS.OBJ Bitmaps for MessageBox

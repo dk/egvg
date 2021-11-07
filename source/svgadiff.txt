@@ -1,0 +1,230 @@
+Here we go, the CRAZY CHIKATILO's revenge!
+Got a SuperVGA? Get the Vision for it!
+
+Отличия и патчи к Express Grafix он же Grafix Vision на VGA:
+
+1. EGVG.PAS, EGVG.ASM.  более не существуют - заменены на GDI.PAS.
+   файлы EGVG.* выполняют теперь роль 16-цветного драйвера.
+   (Везде в uses нужно переставить EGVG на GDI и на SVGAXXX/EGVG/MONO по желанию)
+   Поддерживаемые видеорежимы:
+    256/32768/65536/16M цветов, flat модель - 320x200,
+    640x480, 800x600, 1024x768, 1280x1024, 1600x1200
+   Частично поддерживаемые видеорежиы -
+     16 цветов - 800x600..320x200
+     Моно - 640x480, и 320x200, 640x350, 640x200, 800x600 (через 16-цветовой режим)
+     256  - 640x400
+
+2. Переведены почти все битмапы-
+   SCROLLS.ASM  ->  _SCROLLS.ASM
+      все битмапы оттуда переведены в 256 цветов,
+      ComboBoxPress и ComboBoxDef срезаны. (используются ComboDef и ComboPress)
+
+   REDARM, EXCL, QUEST, INFO asm -> _SIGNS.ASM
+      вместо 2-х битмапов для xor/and вывода держится
+      один для notBlack вывода. (см. использование TOperationalBitMap в MsgBox)
+
+   OKBTN, CANCBTN, YESBTN, NOBTN -> _BUTTONS.ASM.
+     Отрезано "вдавленное" состояние кнопкам по умолчанию.
+     Сделаны кнопки с русскими надписями.
+
+   CHECKS.ASM -> _CHECKS.ASM
+     Обнаружены нерисуемые: Radio/Check.. Press и убраны из кода.
+
+   LEATHER/CONCRETE -> переведены в 256 для скорости.
+   добавлен "фирменный" WallPaperDoom.
+
+   FOLDERS - добавлен для TChDirDialog / TFontDialog / TPrinterSetupDialog.
+   (Требует от видеодрайвера поддержки расширенных операций вывода UserBitBlt)
+
+3. EMS. если можем при старте раскинуть буфера для всего экрана -
+   все рисуется без морганий при перерисовках.
+   DPMI. Если в защищенном, буфера располагаются прямо через MemAlloc.
+   Если жалко памяти, TryBufferedStrategy должно быть False.
+   Соответственно пара TView.DrawBegin/TView.DrawEnd поддерживает
+   и режим без буферизации. Управление выводом буфер <-> экран
+   идет через SetOutput. С TEMSStream конфликта нет.
+   Поддерживается режим буферизации в неактивные видеостраницы - (пока лажает)
+   без аппаратного акселератора работают медленнее, но не требуют памяти.
+   По умолчанию TryBuffersInPage - false; аппаратный акселератор определяется
+   VESAAcceleratorPresent.
+
+4. Дополнен ScrollY до ScrollDraw, что круче, но перерисовки его
+   как-то игнорируют (пока).
+
+5. GDI изменения/усовершенствования:
+  Pattern/логика/два цвета/толщина линий/битмап  для всех фигур
+  5 типов заполнения : линейный 16х1, паттерн 8х8, битмап 8х8,
+  битмап-обои, битмап с устанавливаемым началом.
+  21 логическая операция, возможность установки внешней (UserBitBlt).
+  фигуры : Line, FillPoly, FillEllipse, Ellipse, DrawPoly,
+           RoundBar, RoundRect, FloodFill
+  16 стандартных паттернов 8x8
+  5  стандартных линейных паттернов 16x1
+  Пока еще не крутой но уже неслабый dithering
+  поддержка CHR-шрифтов с вращением и курсивом (TBGIFont::TAbstractFont)
+  поддержка .FON и TrueType-шрифтов (последние без хинтов)
+  (В результате TView.Font стал TView.PaintInfo.Fontом)
+  TView.PaintInfo, как центровые параметры рисования.
+  Возможность вывода в битмап для всех, кто получет TPaintInfo параметром
+  7 функций названы obsolete и поддерживаются только из-за совместимости
+
+  Note: При толщине линии 0 эллипс рисуется полностью
+  залитым, а на FillPoly/FloodFill толщина не влияет, т.к. некуда.
+  Битмаповые паттерны понимают любой формат (см.CreateDIBitmapIndirect)
+
+6. в TShade добавлены стили shBarPattern/sbBarBMP, использующиe паттерн-
+   указатель - глобал shpUser. Default-кнопка выделяется вуалью по
+   краям текста. Для TScroller'a убрано пока скрытие скроллбара при
+   не sfFocused.
+
+7. EGFont:
+    TAbstractFont:
+    В вызов WrStr добавлен параметр TPaintInfo
+    Добавлен флаг Style - см fsXXX константы
+    Добавлены функции SelectCaps, Select, GetName
+    Регистрация flat-фонтов требует имени шрифта (см. TFontDialog)
+    MaxFontNum = 50
+    Новые функции - SelectFontCaps, GetFreeFontID, DisposeFont,
+    GetFontByName, EnumFonts, AssignFont, GetCurrentFont, GetFontID.
+
+    Вставлена возможность масштабирования bitmaр-шрифтов,
+    и соотв. новый объект TScaledSimpleFont (см. функции
+    разработчика FillScaled/ScaleMap)
+
+8. Операции с битмапами:
+   Тип битмапа, аналогичного видеопамяти хранится в DIBType.
+   Переделаны LoadRscBitmap, LoadRscIcon, LoadImageFile, LoadBMP.
+   LoadRscIcon стал брать 256 цветов и конвертить их в 16,
+   LoadRscBitmap вызывает переделанный LoadImageFile,
+   (при этом требует TLogPalette как параметр)
+   а LoadImageFile может загружать некомпрессированый битмап
+   типов моно..TrueColor и конвертировать в любой из внутренних
+   DIB-типов - (imMono, im16, im256, imTC)
+   остальное не сделано т.к. не возникало необходимости.
+   Добавлены функции CreateDIBitmap, FreeDImage, GetImageSize,
+   GetImageBufferSize, Bitmap2Image<S>, MakeMono16<S>, RemapImage,
+   CopyDIBits, CreateDImage, StretchDIBitmap, ImplantDIBitmap,
+   MapBMPLineRead, SetDIBDriver/RestoreDIBDriver.
+   В большинстве эти функции работают только с типом битмапа DIBType,
+   SetDIBDriver предназначен для быстрого изменения DIBType и методов,
+   привязанных к нему.
+   Предоставлены возможности работы с BMP, превышающими 64K.
+   Загружать такие может пока только LoadImageFile/LoadXXX/LoadRasterFile,
+   а в остальном работа точно такая же. Такие BMPы хранятся в потоках,
+   специфические функции для них:
+    IsImageStreamed, MapBitLineRead, MapBitLineWrite, MapBitLineFlush,
+    MapBMPLineRead.
+   Для работы с потоками включены авторские модуля XMM.PAS и STREAMS.PAS,
+   реализующие объекты TXMSStream, TDMMStream и процедуры работы
+   с локальными сжaтыми данными ExplodeStream/ImplodeStream.
+
+9. Палитры
+   Вставлен модуль PALETTES.PAS
+   В TView поставлена работа с виртуальными палитрами для 256 цветов -
+   в связи с этим дополнены методы:
+     TView:  Init, Done, DrawShow, DrawHide, SetState
+     TGroup: InsertBefore
+   Добавлены методы:
+     TView:  RealizePalette, UpdateColors
+   Новые глобальные:
+     CreatePalette, DisposePalette, RedrawPalette
+
+10.Вставлены полудемонстрационные модуля:
+    AFTERDRK.PAS  - Хранители экрана
+    FLICK   .PAS  - Подгруз фликов
+    INIFILE .PAS  - Работа с .INI-файлами
+    CALC    .PAS, GADGETS.PAS, GAUGES.PAS - TV переделки
+    
+11.Вставлен загруз упакованных (правда, своими силами) BMP-ов.
+   Для этого мелкая утилита BMPPack, из BMP делающая пакованый
+   PBM pkzip-овским методом. (*) уже устарело, т.к. можно читать гифы,
+   а выкидывать жалко.
+
+12. Модуль Image, реализующий Load/Save BMP, Load PCX и Load GIF.
+    Лажа с монохромными гифами.
+
+13. Модуль Printers, в котором содержатся 2 фильтра - для ibm 9-pin
+    (epson compatible) и hp compatible.
+    TIBMPrinter работает отлично, TPCLPrinter - кривовто, т.к.
+    мало тестирован (мало у меня был Laser Jet :( ).
+
+14.По мелочам:
+    Вставлен модуль VApp и TVApplication в нем для написания типа:
+    -> Procedure OpenFile(var Event : TEvent); Virtual cmOpen;
+    Пофиксен мелкий баг на неусечение TWindow.Frame^.Title^ при двух иконах.
+    Пофиксены мелкие лажи TEditor'a/TView'a.
+    Для некоторых объектов (TInputLine, TEditor, TMenuBar/Box, TStatusLine)
+    выставлена корректная работа с полиширинными шрифтами
+    Для MessageBox новая константа mfBitmap - если стоит, то параметры,
+    на которые идет ссылка имеют формат: PImage, PVGAPalette и параметры
+    далее как и раньше. Как в Виндах, можно по разному накладывать обои -
+    var WallPaperFlags
+    Вставлены стандартные диалоги выбора шрифтов, цветов и видеорежимов
+    (TFontDialog/TColorDialog/TVideoDriverDialog/TPrinterSetupDialog
+    в WSTDDLG.PAS)
+     В Drivers вставлен SysNotifyProc для вариантов когда буферов нет
+    а SystemError восстанавливал экран только через буфера. Там же расширен
+    SystemBeep (см. waveplay.pas).
+    в TView поставлена переменная CursorShape (как hCursor)
+    в TDialog внесен lastIconPos для запоминания позиции иконки
+
+15. Лажи оригинального visiona, до которых не дошли руки:
+    При засовывании окна в самый низ под статусбар его потом невозможно вытащить
+    При засовывании окна в левый борт в упор лажает рамка переноса
+    При одновременных активных действиях мышой и перерисовках мышь
+      иногда теряет контекст
+    Стандартные битмап-кнопки не понимают горячих клавишей
+    Перерисовки TMenuView underview вызывают showMouse/hideMouse
+    Курсор в окне не прячется под владельцем окна (ResetCursor не проводит
+      иерархических проверок по перекрытию)
+
+16. Пересмотрено установление видеорежима в связи с наличием драйверов для
+    четырех типов видеорежимов. См. примеры SVGA256..SVGA16M
+
+17. На основе механизма управления внутренними драйверами включен
+    модуль проигрывания wave-файлов, WAVEPLAY.PAS, к нему идут два
+    драйвера - SPEAKER.PAS для спикера и ковоха и BLASTER.PAS для
+    Sound Blaster'a. Под OS/2 лажает страшно.
+
+18. Свои (и не совсем свои) лажи, до которых не дошли руки:
+    в TrueType библиотеке где-то некорректно работают с Getmem/Freemem,
+    отсюда глюки                               *
+    в TrueType библиотеке не обрабатываются хинты при небольших
+    размерах выводимого шрифта                 **
+    в GIF-библотеке не работает подгруз GIF89a *
+    в GIF-библотеке лажает подгруз PCX, для которых линейка сжатия
+    переносится на следующую скан-линию - я сделал свой подгруз, но
+    он медленный                               *
+    где-то глючит подгруз монохромных гифов    *
+
+    *  - в принципе поправимо
+    ** - в принципе непоправимо
+
+
+Вот и все, btw.
+
+Осталось не полениться и сделать:
+  Неполные перерисовки со скроллом
+  256  и более -цветные курсоры, а может быть даже фликовые курсоры.
+  Внешние видео-дривера - хотя для прот-моды их достаточно вынести в dll.
+
+EGVG authors:
+  Tony Berezin    {TONY}
+  Oleg Oleinick   {OOA}
+  Juri Shimon     {SHIM}
+  Oleg Giner      {GIO}
+SVGA author:
+  Dmitry Karasik  {DK}
+Used materials:
+  Turbo Vision 2.0 +examples, (c) Borland International
+  SuperVision, tm НТЦ "Модуль" В.Володин, С.Королев
+  Grafix Vision 2.0, (c) ICS Soft
+  TrueType for DOS, (c) Matthias Koppe
+  PKWARE Compression library, tm
+  TurboProfessional 5.21 (c) TurboPower
+  RIFF wave play module, (c) S.Peslyak
+  FLI animation play module, (c) V.Vysotsky
+  Sound Blaster ideas by Mark Feldman
+  My brains :)
+
+
