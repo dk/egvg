@@ -324,8 +324,8 @@ End;
 
 Procedure PutBufferPart;
 Begin
-  WriteLn(txtx);
-  WriteLn(txty);
+{  WriteLn(txtx);
+  WriteLn(txty);}
   CopySymbols;
 End;
 
